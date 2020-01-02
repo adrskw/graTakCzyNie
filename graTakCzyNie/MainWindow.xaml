@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:graTakCzyNie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Main Window" MinHeight="250" MinWidth="600" Height="250" Width="600">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1.2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid VerticalAlignment="Center" Grid.Column="0">
+            <TextBlock TextAlignment="Center" Margin="-5" Text="gra planszowa"></TextBlock>
+            <TextBlock TextAlignment="Center" FontSize="45" FontWeight="Bold">
+                <Run Foreground="SeaGreen">tak</Run><Run Foreground="LightSeaGreen">CZY</Run><Run Foreground="SeaGreen">nie</Run>
+            </TextBlock>
+        </Grid>
+        <StackPanel VerticalAlignment="Center" Grid.Column="1">
+            <Button x:Name="newGame" Content="Nowa gra" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="viewResults" Content="Pokaż wyniki" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+        </StackPanel>
     </Grid>
 </Window>
