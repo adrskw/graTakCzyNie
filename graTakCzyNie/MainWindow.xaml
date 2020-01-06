@@ -18,8 +18,8 @@
             </TextBlock>
         </Grid>
         <StackPanel VerticalAlignment="Center" Grid.Column="1">
-            <Button x:Name="newGame" Content="Nowa gra" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
-            <Button x:Name="viewResults" Content="Pokaż wyniki" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="ButtonNewGame" Content="Nowa gra" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="ButtonViewResults" Content="Pokaż wyniki" Margin="60 10" Padding="20 5" FontSize="25" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
         </StackPanel>
     </Grid>
 </Window>

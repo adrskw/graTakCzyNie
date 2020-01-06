@@ -78,7 +78,7 @@ namespace graTakCzyNie
 
             fieldBorder.Child = pawnsWrap;
 
-            gameBoard.Children.Add(fieldBorder);
+            GridGameBoard.Children.Add(fieldBorder);
             FieldId++;
         }
 
@@ -91,7 +91,7 @@ namespace graTakCzyNie
         {
             for (int i = 0; i < width; i++)
             {
-                gameBoard.ColumnDefinitions.Add(new ColumnDefinition()
+                GridGameBoard.ColumnDefinitions.Add(new ColumnDefinition()
                 {
                     Width = new GridLength(1, GridUnitType.Star)
                 });
@@ -99,7 +99,7 @@ namespace graTakCzyNie
 
             for (int i = 0; i < height; i++)
             {
-                gameBoard.RowDefinitions.Add(new RowDefinition()
+                GridGameBoard.RowDefinitions.Add(new RowDefinition()
                 {
                     Height = new GridLength(1, GridUnitType.Star)
                 });
@@ -142,65 +142,65 @@ namespace graTakCzyNie
                 diceGridElement.Children.Add(dot);
             }
             
-            diceGrid.BeginAnimation(OpacityProperty, diceGridFadeOutAnimation);
+            GridDice.BeginAnimation(OpacityProperty, diceGridFadeOutAnimation);
             await Task.Delay(300);
 
-            diceGrid.Children.Clear();
-            diceGrid.Visibility = Visibility.Collapsed;
-            diceLoading.Visibility = Visibility.Visible;
-            diceLoading.BeginAnimation(OpacityProperty, diceLoadingAnimation);
+            GridDice.Children.Clear();
+            GridDice.Visibility = Visibility.Collapsed;
+            MediaElementDiceLoading.Visibility = Visibility.Visible;
+            MediaElementDiceLoading.BeginAnimation(OpacityProperty, diceLoadingAnimation);
 
             switch (number)
             {
                 case 1:
-                    GenerateDot(diceGrid, 2, 2);
+                    GenerateDot(GridDice, 2, 2);
                     break;
                 case 2:
-                    GenerateDot(diceGrid, 1, 1);
-                    GenerateDot(diceGrid, 3, 3);
+                    GenerateDot(GridDice, 1, 1);
+                    GenerateDot(GridDice, 3, 3);
                     break;
                 case 3:
-                    GenerateDot(diceGrid, 1, 1);
-                    GenerateDot(diceGrid, 2, 2);
-                    GenerateDot(diceGrid, 3, 3);
+                    GenerateDot(GridDice, 1, 1);
+                    GenerateDot(GridDice, 2, 2);
+                    GenerateDot(GridDice, 3, 3);
                     break;
                 case 4:
-                    GenerateDot(diceGrid, 1, 1);
-                    GenerateDot(diceGrid, 3, 1);
-                    GenerateDot(diceGrid, 1, 3);
-                    GenerateDot(diceGrid, 3, 3);
+                    GenerateDot(GridDice, 1, 1);
+                    GenerateDot(GridDice, 3, 1);
+                    GenerateDot(GridDice, 1, 3);
+                    GenerateDot(GridDice, 3, 3);
                     break;
                 case 5:
-                    GenerateDot(diceGrid, 1, 1);
-                    GenerateDot(diceGrid, 3, 1);
-                    GenerateDot(diceGrid, 2, 2);
-                    GenerateDot(diceGrid, 1, 3);
-                    GenerateDot(diceGrid, 3, 3);
+                    GenerateDot(GridDice, 1, 1);
+                    GenerateDot(GridDice, 3, 1);
+                    GenerateDot(GridDice, 2, 2);
+                    GenerateDot(GridDice, 1, 3);
+                    GenerateDot(GridDice, 3, 3);
                     break;
                 case 6:
-                    GenerateDot(diceGrid, 1, 1);
-                    GenerateDot(diceGrid, 1, 2);
-                    GenerateDot(diceGrid, 1, 3);
-                    GenerateDot(diceGrid, 3, 1);
-                    GenerateDot(diceGrid, 3, 2);
-                    GenerateDot(diceGrid, 3, 3);
+                    GenerateDot(GridDice, 1, 1);
+                    GenerateDot(GridDice, 1, 2);
+                    GenerateDot(GridDice, 1, 3);
+                    GenerateDot(GridDice, 3, 1);
+                    GenerateDot(GridDice, 3, 2);
+                    GenerateDot(GridDice, 3, 3);
                     break;
             }
 
             await Task.Delay(700);
 
-            diceGrid.BeginAnimation(OpacityProperty, diceGridFadeInAnimation);
-            diceGrid.Visibility = Visibility.Visible;
-            diceLoading.Visibility = Visibility.Collapsed;
+            GridDice.BeginAnimation(OpacityProperty, diceGridFadeInAnimation);
+            GridDice.Visibility = Visibility.Visible;
+            MediaElementDiceLoading.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
         /// Zapętlenie gifa wyświelającego wylosowaną liczbę na kostce
         /// </summary>
-        private void DiceLoading_MediaEnded(object sender, RoutedEventArgs e)
+        private void MediaElementDiceLoading_MediaEnded(object sender, RoutedEventArgs e)
         {
-            diceLoading.Position = new TimeSpan(0, 0, 1);
-            diceLoading.Play();
+            MediaElementDiceLoading.Position = new TimeSpan(0, 0, 1);
+            MediaElementDiceLoading.Play();
         }
     }
 }

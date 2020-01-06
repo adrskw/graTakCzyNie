@@ -11,7 +11,7 @@
             <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="200"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" x:Name="gameBoard">
+        <Grid Grid.Column="0" x:Name="GridGameBoard">
             <!-- Przykładowy wygląd pionków na polu
             <Border Grid.Column="1" Grid.Row="1" Background="Blue" BorderBrush="Silver" BorderThickness="1">
                 <UniformGrid Columns="2" Rows="2">
@@ -50,11 +50,11 @@
                 <TextBlock Grid.Column="1" Grid.Row="3" Text="gracz4 (komputer)" Margin="10 0 0 10"/>
             </Grid>
 
-            <Border x:Name="dice" HorizontalAlignment="Stretch" Width="100" Height="100" BorderBrush="Black" BorderThickness="3" CornerRadius="15" Background="Ivory">
+            <Border HorizontalAlignment="Stretch" Width="100" Height="100" BorderBrush="Black" BorderThickness="3" CornerRadius="15" Background="Ivory">
                 <Grid>
-                    <MediaElement x:Name="diceLoading" MediaEnded="DiceLoading_MediaEnded" LoadedBehavior="Play" UnloadedBehavior="Manual" Source="Resources/diceLoading.gif" Stretch="None" Visibility="Collapsed"></MediaElement>
+                    <MediaElement x:Name="MediaElementDiceLoading" MediaEnded="MediaElementDiceLoading_MediaEnded" LoadedBehavior="Play" UnloadedBehavior="Manual" Source="Resources/diceLoading.gif" Stretch="None" Visibility="Collapsed"></MediaElement>
 
-                    <Grid x:Name="diceGrid">
+                    <Grid x:Name="GridDice">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.5*"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -73,7 +73,7 @@
                 </Grid>
             </Border>
 
-            <Button x:Name="random" Content="Losuj" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="15" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="ButtonRollDice" Content="Losuj" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="15" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" Grid.Column="1">

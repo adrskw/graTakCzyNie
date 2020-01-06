@@ -16,9 +16,9 @@
             <TextBlock Text="Opcje gry" FontSize="25" FontWeight="Bold"></TextBlock>
 
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                <Label Content="Ilość graczy:" Target="{Binding ElementName=totalPlayers}"></Label>
+                <Label Content="Ilość graczy:" Target="{Binding ElementName=ComboBoxTotalPlayers}"></Label>
 
-                <ComboBox x:Name="totalPlayers" HorizontalContentAlignment="Stretch" SelectionChanged="TotalPlayers_SelectionChanged">
+                <ComboBox x:Name="ComboBoxTotalPlayers" HorizontalContentAlignment="Stretch" SelectionChanged="ComboBoxTotalPlayers_SelectionChanged">
                     <ComboBoxItem Content="2"></ComboBoxItem>
                     <ComboBoxItem Content="3"></ComboBoxItem>
                     <ComboBoxItem Content="4"></ComboBoxItem>
@@ -27,7 +27,7 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom">
-            <Button x:Name="startGame" Content="Rozpocznij grę" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="20" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="ButtonStartGame" Content="Rozpocznij grę" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="20" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 20">
@@ -50,30 +50,30 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Rectangle x:Name="player1_color" Grid.Column="0" Grid.Row="0" Fill="Red" Margin="0 0 0 10"></Rectangle>
-                <TextBox x:Name="player1_name" Grid.Column="1" Grid.Row="0" Margin="20 0 20 10">gracz1</TextBox>
-                <ComboBox x:Name="player1_type" Grid.Column="2" Grid.Row="0" Margin="0 0 0 10">
+                <Rectangle x:Name="Player1_Color" Grid.Column="0" Grid.Row="0" Fill="Red" Margin="0 0 0 10"></Rectangle>
+                <TextBox x:Name="Player1_Name" Grid.Column="1" Grid.Row="0" Margin="20 0 20 10">gracz1</TextBox>
+                <ComboBox x:Name="Player1_Type" Grid.Column="2" Grid.Row="0" Margin="0 0 0 10">
                     <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
                     <ComboBoxItem>Komputer</ComboBoxItem>
                 </ComboBox>
 
-                <Rectangle x:Name="player2_color" Grid.Column="0" Grid.Row="1" Fill="Black" Margin="0 0 0 10"></Rectangle>
-                <TextBox x:Name="player2_name" Grid.Column="1" Grid.Row="1" Margin="20 0 20 10">gracz2</TextBox>
-                <ComboBox x:Name="player_type" Grid.Column="2" Grid.Row="1" Margin="0 0 0 10">
+                <Rectangle x:Name="Player2_Color" Grid.Column="0" Grid.Row="1" Fill="Black" Margin="0 0 0 10"></Rectangle>
+                <TextBox x:Name="Player2_Name" Grid.Column="1" Grid.Row="1" Margin="20 0 20 10">gracz2</TextBox>
+                <ComboBox x:Name="Player_Type" Grid.Column="2" Grid.Row="1" Margin="0 0 0 10">
                     <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
                     <ComboBoxItem>Komputer</ComboBoxItem>
                 </ComboBox>
 
-                <Rectangle x:Name="player3_color" Grid.Column="0" Grid.Row="2" Fill="Purple" Margin="0 0 0 10"></Rectangle>
-                <TextBox x:Name="player3_name" Grid.Column="1" Grid.Row="2" Margin="20 0 20 10">gracz3</TextBox>
-                <ComboBox x:Name="player3_type" Grid.Column="2" Grid.Row="2" Margin="0 0 0 10">
+                <Rectangle x:Name="Player3_Color" Grid.Column="0" Grid.Row="2" Fill="Purple" Margin="0 0 0 10"></Rectangle>
+                <TextBox x:Name="Player3_Name" Grid.Column="1" Grid.Row="2" Margin="20 0 20 10">gracz3</TextBox>
+                <ComboBox x:Name="Player3_Type" Grid.Column="2" Grid.Row="2" Margin="0 0 0 10">
                     <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
                     <ComboBoxItem>Komputer</ComboBoxItem>
                 </ComboBox>
 
-                <Rectangle x:Name="player4_color" Grid.Column="0" Grid.Row="3" Fill="Green"></Rectangle>
-                <TextBox x:Name="player4_name" Grid.Column="1" Grid.Row="3" Margin="20 0">gracz4</TextBox>
-                <ComboBox x:Name="player4_type" Grid.Column="2" Grid.Row="3">
+                <Rectangle x:Name="Player4_Color" Grid.Column="0" Grid.Row="3" Fill="Green"></Rectangle>
+                <TextBox x:Name="Player4_Name" Grid.Column="1" Grid.Row="3" Margin="20 0">gracz4</TextBox>
+                <ComboBox x:Name="Player4_Type" Grid.Column="2" Grid.Row="3">
                     <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
                     <ComboBoxItem>Komputer</ComboBoxItem>
                 </ComboBox>

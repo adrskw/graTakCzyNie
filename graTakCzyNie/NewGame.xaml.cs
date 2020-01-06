@@ -33,13 +33,13 @@ namespace graTakCzyNie
             InitializeComponent();
 
             // ustawienie domyślnej ilości graczy na 2
-            totalPlayers.SelectedIndex = 0;
+            ComboBoxTotalPlayers.SelectedIndex = 0;
 
             // dodanie eventu lewego kliknięcia myszy dla 4 prostokątów odpowiedzialnych za kolor gracza
-            player1_color.MouseLeftButtonDown += ChangePlayerColor;
-            player2_color.MouseLeftButtonDown += ChangePlayerColor;
-            player3_color.MouseLeftButtonDown += ChangePlayerColor;
-            player4_color.MouseLeftButtonDown += ChangePlayerColor;
+            Player1_Color.MouseLeftButtonDown += ChangePlayerColor;
+            Player2_Color.MouseLeftButtonDown += ChangePlayerColor;
+            Player3_Color.MouseLeftButtonDown += ChangePlayerColor;
+            Player4_Color.MouseLeftButtonDown += ChangePlayerColor;
         }
 
         /// <summary>
@@ -67,35 +67,35 @@ namespace graTakCzyNie
         /// </summary>
         private void TotalPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ComboBoxItem selectedItem = totalPlayers.SelectedItem as ComboBoxItem;
+            ComboBoxItem selectedItem = ComboBoxTotalPlayers.SelectedItem as ComboBoxItem;
             string value = selectedItem.Content.ToString();
 
             switch (value)
             {
                 case "2":
-                    player3_color.Visibility =
-                        player3_name.Visibility =
-                        player3_type.Visibility =
-                        player4_color.Visibility =
-                        player4_name.Visibility =
-                        player4_type.Visibility = Visibility.Collapsed;
+                    Player3_Color.Visibility =
+                        Player3_Name.Visibility =
+                        Player3_Type.Visibility =
+                        Player4_Color.Visibility =
+                        Player4_Name.Visibility =
+                        Player4_Type.Visibility = Visibility.Collapsed;
                     break;
                 case "3":
-                    player3_color.Visibility = 
-                        player3_name.Visibility = 
-                        player3_type.Visibility = Visibility.Visible;
-                    player4_color.Visibility = 
-                        player4_name.Visibility =
-                        player4_type.Visibility = Visibility.Collapsed;
+                    Player3_Color.Visibility = 
+                        Player3_Name.Visibility = 
+                        Player3_Type.Visibility = Visibility.Visible;
+                    Player4_Color.Visibility = 
+                        Player4_Name.Visibility =
+                        Player4_Type.Visibility = Visibility.Collapsed;
                     break;
                 case "4":
                 default:
-                    player3_color.Visibility =
-                        player3_name.Visibility =
-                        player3_type.Visibility =
-                        player4_color.Visibility =
-                        player4_name.Visibility = 
-                        player4_type.Visibility = Visibility.Visible;
+                    Player3_Color.Visibility =
+                        Player3_Name.Visibility =
+                        Player3_Type.Visibility =
+                        Player4_Color.Visibility =
+                        Player4_Name.Visibility = 
+                        Player4_Type.Visibility = Visibility.Visible;
                     break;
             }
         }
