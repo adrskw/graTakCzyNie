@@ -24,5 +24,12 @@ namespace graTakCzyNie
         {
             InitializeComponent();
         }
+
+        private void ButtonNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            NewGame newGame = new NewGame();
+            newGame.Show();
+            this.Close();
+        }
     }
 }

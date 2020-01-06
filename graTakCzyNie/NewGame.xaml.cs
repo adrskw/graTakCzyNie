@@ -65,7 +65,7 @@ namespace graTakCzyNie
         /// <summary>
         /// Ukrywanie/pokazywanie pól gracza na podstawie wybranej ilości
         /// </summary>
-        private void TotalPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBoxTotalPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBoxItem selectedItem = ComboBoxTotalPlayers.SelectedItem as ComboBoxItem;
             string value = selectedItem.Content.ToString();
@@ -98,6 +98,13 @@ namespace graTakCzyNie
                         Player4_Type.Visibility = Visibility.Visible;
                     break;
             }
+        }
+
+        private void ButtonStartGame_Click(object sender, RoutedEventArgs e)
+        {
+            Game game = new Game();
+            game.Show();
+            this.Close();
         }
     }
 }

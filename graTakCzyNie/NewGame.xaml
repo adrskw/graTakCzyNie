@@ -27,7 +27,7 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom">
-            <Button x:Name="ButtonStartGame" Content="Rozpocznij grę" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="20" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue"></Button>
+            <Button x:Name="ButtonStartGame" Content="Rozpocznij grę" HorizontalAlignment="Center" Margin="20" Padding="20 5" FontSize="20" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue" Click="ButtonStartGame_Click"></Button>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 20">
