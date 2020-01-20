@@ -18,7 +18,7 @@ namespace graTakCzyNieLibrary
         {
             return await Task.Run(() =>
             {
-                if (PlayersList is null)
+                if (PlayersList.Count == 0)
                 {
                     return new EngineResult
                     {
