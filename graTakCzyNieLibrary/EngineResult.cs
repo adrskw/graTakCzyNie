@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
-    class EngineResult
+    public class EngineResult
     {
         public bool Succedeed { get; set; }
         public Field Field { get; set; }

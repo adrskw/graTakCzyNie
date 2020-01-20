@@ -9,7 +9,7 @@ namespace graTakCzyNieLibrary
     public class Engine
     {
         private Board board;
-
+        public QuestionDatabase qDatabase { get; set; }
         private bool gameRunning = false;
 
         public List<Player> PlayersList { get; private set; } = new List<Player>();
@@ -46,3 +46,4 @@ namespace graTakCzyNieLibrary
             });
         }
     }
+}
