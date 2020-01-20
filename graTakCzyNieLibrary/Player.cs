@@ -12,12 +12,17 @@ namespace graTakCzyNieLibrary
         public string Color { get; }
         public bool IsComputer { get; }
         public ushort Score { get; set; }
+        public Field CurrentField { get; set; }
+        public int CurrentPosition { get; set; }
+        public int ImprisonedTo { get; set; }
 
         public Player(string name, string color, bool isComputer = false)
         {
             Name = name;
             Color = color;
             IsComputer = isComputer;
+            Score = 0;
+            CurrentField = Field.Start;
         }
 
         public void AddPoints(ushort points)
