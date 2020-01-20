@@ -142,5 +142,49 @@ namespace graTakCzyNieLibrary
 
             return engineResult;
         }
+
+        public async Task<EngineResult> PlayerAnswer(Player player, int questionId, bool answer)
+        {
+            EngineResult engineResult = new EngineResult();
+
+            var targetedPlayer = PlayersList.FirstOrDefault(f => f.Name == player.Name);
+            if (targetedPlayer == null)
+            {
+                engineResult.Succedeed = false;
+                engineResult.ErrorMessage = "Player not found! " + player.Name;
+                return engineResult;
+            }
+            else if (targetedPlayer.ImprisonedTo > moveCounter)
+            {
+                engineResult.Succedeed = false;
+                engineResult.Player = targetedPlayer;
+                engineResult.ErrorMessage = "Player " + targetedPlayer.Name + " is in a trap";
+                return engineResult;
+            }
+
+            engineResult.Player = targetedPlayer;
+
+            var checkAnswer = await qDatabase.CheckAnswer(questionId, answer);
+            if (checkAnswer == null)
+            {
+                engineResult.Succedeed = false;
+                engineResult.ErrorMessage = "Question do not exists!";
+                return engineResult;
+            }
+            else if (checkAnswer == true)
+            {
+                targetedPlayer.AddPoints(2);
+                engineResult.Succedeed = true;
+                engineResult.Question.CorrectAnswer = true;
+                return engineResult;
+            }
+            else
+            {
+                targetedPlayer.SubtractPoints(1);
+                engineResult.Succedeed = true;
+                engineResult.Question.CorrectAnswer = false;
+                return engineResult;
+            }
+        }
     }
 }
