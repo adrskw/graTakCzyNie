@@ -9,6 +9,7 @@ namespace graTakCzyNieLibrary
     public class EngineResult
     {
         public bool Succedeed { get; set; }
+        public Question Question { get; set; }
         public Field Field { get; set; }
         public Player Player { get; set; }
         public string ErrorMessage { get; set; }
