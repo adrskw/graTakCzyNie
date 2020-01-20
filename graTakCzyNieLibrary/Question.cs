@@ -36,5 +36,24 @@ namespace graTakCzyNieLibrary
             });
 
         }
+        public async Task<bool?> CheckAnswer(int questionId, bool answer)
+        {
+            return await Task.Run(() =>
+            {
+                var question = questions.FirstOrDefault(f => f.Id == questionId);
+                if (question == null)
+                {
+                    return default;
+                }
+                if (question.CorrectAnswer == answer)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+        }
     }
 }
