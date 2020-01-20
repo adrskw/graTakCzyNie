@@ -21,5 +21,20 @@ namespace graTakCzyNieLibrary
             new Question {Id = 2, QuestionText = "Czy lubie placki?", CorrectAnswer = false},
             new Question {Id = 3, QuestionText = "Czy lubie kobiety?", CorrectAnswer = true},
         };
+
+        public async Task<Question> GetRandomQuestion()
+        {
+            return await Task.Run(() =>
+            {
+                Random random = new Random();
+                var question = questions.FirstOrDefault(f => f.Id == random.Next(1, questions.Count));
+                return new Question
+                {
+                    Id = question.Id,
+                    QuestionText = question.QuestionText,
+                };
+            });
+
+        }
     }
 }
