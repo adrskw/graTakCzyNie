@@ -45,5 +45,35 @@ namespace graTakCzyNieLibrary
                 }
             });
         }
+
+        public async Task<EngineResult> CreatePlayers(List<Player> players)
+        {
+            return await Task.Run(() =>
+            {
+                List<Player> createdPlayers = new List<Player>();
+
+                foreach (var item in players)
+                {
+                    if (createdPlayers.FirstOrDefault(f => f.Name == item.Name) != null)
+                    {
+                        return new EngineResult
+                        {
+                            Succedeed = false,
+                            ErrorMessage = "Player " + item.Name + " is already exists!"
+                        };
+                    }
+
+                    Player player = new Player(item.Name, item.Color, item.IsComputer);
+                    createdPlayers.Add(player);
+                }
+
+                PlayersList = createdPlayers;
+
+                return new EngineResult()
+                {
+                    Succedeed = true
+                };
+            });
+        }
     }
 }
