@@ -52,6 +52,5 @@ namespace graTakCzyNieLibrary
                 return field;
             });
         }
-
     }
 }
