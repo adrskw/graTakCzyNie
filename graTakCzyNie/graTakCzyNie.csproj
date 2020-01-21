@@ -108,7 +108,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\graTakCzyNieLibrary\graTakCzyNieLibrary.csproj">
+      <Project>{0993861f-9ed5-4b72-b7d2-06f3dccb9063}</Project>
+      <Name>graTakCzyNieLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\diceLoading.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

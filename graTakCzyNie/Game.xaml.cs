@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using graTakCzyNieLibrary;
 
 namespace graTakCzyNie
 {
@@ -21,9 +22,11 @@ namespace graTakCzyNie
     /// </summary>
     public partial class Game : Window
     {
+        private Engine engine;
         private int FieldId { get; set; } = 0;
         private byte GameBoardWidth { get; } = 14;
         private byte GameBoardHeight { get; } = 12;
+        private Dictionary<int, TextBlock> playerNameTextBlocks = new Dictionary<int, TextBlock>();
         private readonly DoubleAnimation diceLoadingAnimation = new DoubleAnimation
         {
             From = 0,
@@ -44,12 +47,14 @@ namespace graTakCzyNie
             Duration = new Duration(TimeSpan.FromMilliseconds(300))
         };
 
-        public Game()
-        {
+        public Game(Engine engine)
+        {            
             InitializeComponent();
+            this.engine = engine;
 
             GenerateBoard(GameBoardWidth, GameBoardHeight);
             GenerateDice(6);
+            GeneratePlayersList();
         }
 
         /// <summary>
@@ -63,8 +68,7 @@ namespace graTakCzyNie
             {
                 Background = new SolidColorBrush(Colors.LightGray),
                 BorderBrush = new SolidColorBrush(Colors.Black),
-                BorderThickness = new Thickness(1),
-
+                BorderThickness = new Thickness(1)
             };
             Grid.SetColumn(fieldBorder, x);
             Grid.SetRow(fieldBorder, y);
@@ -192,6 +196,45 @@ namespace graTakCzyNie
             GridDice.BeginAnimation(OpacityProperty, diceGridFadeInAnimation);
             GridDice.Visibility = Visibility.Visible;
             MediaElementDiceLoading.Visibility = Visibility.Collapsed;
+        }
+
+        /// <summary>
+        /// Generowanie listy graczy
+        /// </summary>
+        private void GeneratePlayersList()
+        {
+            List<Player> players = engine.PlayersList;
+            int currentPlayer = 0;
+
+            foreach (Player player in players)
+            {
+                Rectangle rectangle = new Rectangle
+                {
+                    Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString(player.Color)),
+                    Margin = new Thickness(0, 0, 0, 10)
+                };
+
+                Grid.SetColumn(rectangle, 0);
+                Grid.SetRow(rectangle, currentPlayer);
+                GridPlayersList.Children.Add(rectangle);
+
+                TextBlock textBlock = new TextBlock
+                {
+                    Text = player.Name,
+                    Margin = new Thickness(10, 0, 0, 10)
+                };
+
+                if (player.IsComputer)
+                {
+                    textBlock.Text += " (komputer)";
+                }
+                Grid.SetColumn(textBlock, 1);
+                Grid.SetRow(textBlock, currentPlayer);
+                GridPlayersList.Children.Add(textBlock);
+                playerNameTextBlocks.Add(player.Id, textBlock);
+
+                currentPlayer++;
+            }
         }
 
         /// <summary>
