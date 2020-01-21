@@ -1,4 +1,5 @@
-﻿using System;
+﻿using graTakCzyNieLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,8 @@ namespace graTakCzyNie
             Colors.Purple
         };
 
+        private Engine engine = new Engine();
+
         public NewGame()
         {
             InitializeComponent();
@@ -36,10 +39,10 @@ namespace graTakCzyNie
             ComboBoxTotalPlayers.SelectedIndex = 0;
 
             // dodanie eventu lewego kliknięcia myszy dla 4 prostokątów odpowiedzialnych za kolor gracza
+            Player0_Color.MouseLeftButtonDown += ChangePlayerColor;
             Player1_Color.MouseLeftButtonDown += ChangePlayerColor;
             Player2_Color.MouseLeftButtonDown += ChangePlayerColor;
             Player3_Color.MouseLeftButtonDown += ChangePlayerColor;
-            Player4_Color.MouseLeftButtonDown += ChangePlayerColor;
         }
 
         /// <summary>
@@ -63,6 +66,41 @@ namespace graTakCzyNie
         }
 
         /// <summary>
+        /// Dodawanie listy graczy do silnika gry
+        /// </summary>
+        private async Task<EngineResult> AddPlayersToEnginePlayerList()
+        {
+            List<Player> players = new List<Player>();
+            List<string> usedColors = new List<string>();
+
+            ComboBoxItem totalPlayersSelectedItem = ComboBoxTotalPlayers.SelectedItem as ComboBoxItem;
+            int totalPlayers = Convert.ToInt32(totalPlayersSelectedItem.Content.ToString());
+
+            for (int i = 0; i < totalPlayers; i++)
+            {
+                TextBox nameTextBox = GridPlayerInfo.FindName("Player" + i + "_Name") as TextBox;
+                string name = nameTextBox.Text;
+
+                Rectangle colorRectangle = GridPlayerInfo.FindName("Player" + i + "_Color") as Rectangle;
+                string color = colorRectangle.Fill.ToString();
+
+                ComboBox typeComboBox = GridPlayerInfo.FindName("Player" + i + "_Type") as ComboBox;
+                ComboBoxItem typeSelectedItem = typeComboBox.SelectedItem as ComboBoxItem;
+                string type = typeSelectedItem.Content.ToString();
+                bool isComputer = false;
+
+                if (type == "Komputer")
+                {
+                    isComputer = true;
+                }
+
+                players.Add(new Player(i, name, color, isComputer));
+            }
+
+            return await engine.CreatePlayers(players);
+        }
+
+        /// <summary>
         /// Ukrywanie/pokazywanie pól gracza na podstawie wybranej ilości
         /// </summary>
         private void ComboBoxTotalPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -73,38 +111,52 @@ namespace graTakCzyNie
             switch (value)
             {
                 case "2":
-                    Player3_Color.Visibility =
+                    Player2_Color.Visibility =
+                        Player2_Name.Visibility =
+                        Player2_Type.Visibility =
+                        Player3_Color.Visibility =
                         Player3_Name.Visibility =
-                        Player3_Type.Visibility =
-                        Player4_Color.Visibility =
-                        Player4_Name.Visibility =
-                        Player4_Type.Visibility = Visibility.Collapsed;
+                        Player3_Type.Visibility = Visibility.Collapsed;
                     break;
                 case "3":
+                    Player2_Color.Visibility = 
+                        Player2_Name.Visibility = 
+                        Player2_Type.Visibility = Visibility.Visible;
                     Player3_Color.Visibility = 
-                        Player3_Name.Visibility = 
-                        Player3_Type.Visibility = Visibility.Visible;
-                    Player4_Color.Visibility = 
-                        Player4_Name.Visibility =
-                        Player4_Type.Visibility = Visibility.Collapsed;
+                        Player3_Name.Visibility =
+                        Player3_Type.Visibility = Visibility.Collapsed;
                     break;
                 case "4":
                 default:
-                    Player3_Color.Visibility =
-                        Player3_Name.Visibility =
-                        Player3_Type.Visibility =
-                        Player4_Color.Visibility =
-                        Player4_Name.Visibility = 
-                        Player4_Type.Visibility = Visibility.Visible;
+                    Player2_Color.Visibility =
+                        Player2_Name.Visibility =
+                        Player2_Type.Visibility =
+                        Player3_Color.Visibility =
+                        Player3_Name.Visibility = 
+                        Player3_Type.Visibility = Visibility.Visible;
                     break;
             }
         }
 
-        private void ButtonStartGame_Click(object sender, RoutedEventArgs e)
+        private async void ButtonStartGame_Click(object sender, RoutedEventArgs e)
         {
-            Game game = new Game();
-            game.Show();
-            this.Close();
+            EngineResult addPlayersResult = await AddPlayersToEnginePlayerList();
+            EngineResult startGameResult = await engine.StartGame(66);
+
+            if (addPlayersResult.Succedeed == false)
+            {
+                MessageBox.Show(addPlayersResult.ErrorMessage);
+            }
+            else if (startGameResult.Succedeed == false)
+            {
+                MessageBox.Show(startGameResult.ErrorMessage);
+            }
+            else
+            {
+                Game game = new Game(engine);
+                game.Show();
+                this.Close();
+            }
         }
     }
 }

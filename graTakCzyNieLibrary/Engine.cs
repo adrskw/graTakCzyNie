@@ -11,12 +11,12 @@ namespace graTakCzyNieLibrary
         private Board board;
         public QuestionDatabase qDatabase { get; set; }
 
-        public int moveCounter { get; private set; } = 0;
+        public int MoveCounter { get; private set; } = 0;
         private bool gameRunning = false;
 
         public List<Player> PlayersList { get; private set; } = new List<Player>();
 
-        public async Task<EngineResult> StartGame()
+        public async Task<EngineResult> StartGame(int fieldNumber)
         {
             return await Task.Run(() =>
             {
@@ -39,7 +39,7 @@ namespace graTakCzyNieLibrary
                 else
                 {
                     qDatabase = new QuestionDatabase();
-                    board = new Board(50);
+                    board = new Board(fieldNumber);
                     return new EngineResult
                     {
                         Succedeed = true
@@ -52,11 +52,20 @@ namespace graTakCzyNieLibrary
         {
             return await Task.Run(() =>
             {
-                List<Player> createdPlayers = new List<Player>();
+                PlayersList = new List<Player>();
 
                 foreach (var item in players)
                 {
-                    if (createdPlayers.FirstOrDefault(f => f.Name == item.Name) != null)
+                    if (item.Name == string.Empty)
+                    {
+                        return new EngineResult
+                        {
+                            Succedeed = false,
+                            ErrorMessage = "Nie podano nazwy jednego z graczy!"
+                        };
+                    }
+
+                    if (PlayersList.FirstOrDefault(f => f.Name == item.Name) != null)
                     {
                         return new EngineResult
                         {
@@ -65,11 +74,18 @@ namespace graTakCzyNieLibrary
                         };
                     }
 
-                    Player player = new Player(item.Name, item.Color, item.IsComputer);
-                    createdPlayers.Add(player);
-                }
+                    if (PlayersList.FirstOrDefault(f => f.Color == item.Color) != null)
+                    {
+                        return new EngineResult
+                        {
+                            Succedeed = false,
+                            ErrorMessage = "Gracze nie mogą mieć tego samego koloru!"
+                        };
+                    }
 
-                PlayersList = createdPlayers;
+                    Player player = new Player(item.Id, item.Name, item.Color, item.IsComputer);
+                    PlayersList.Add(player);
+                }
 
                 return new EngineResult()
                 {
@@ -89,7 +105,7 @@ namespace graTakCzyNieLibrary
                 engineResult.ErrorMessage = "Player not found! " + player.Name;
                 return engineResult;
             }
-            else if (targetedPlayer.ImprisonedTo > moveCounter)
+            else if (targetedPlayer.ImprisonedTo > MoveCounter)
             {
                 engineResult.Succedeed = false;
                 engineResult.Player = targetedPlayer;
@@ -124,7 +140,7 @@ namespace graTakCzyNieLibrary
                     engineResult.Succedeed = true;
                     break;
                 case Field.Trap:
-                    targetedPlayer.ImprisonedTo = moveCounter + 3;
+                    targetedPlayer.ImprisonedTo = MoveCounter + 3;
                     engineResult.Succedeed = true;
                     break;
                 case Field.Normal:
@@ -138,7 +154,7 @@ namespace graTakCzyNieLibrary
                     };
             }
 
-            moveCounter++;
+            MoveCounter++;
 
             return engineResult;
         }
@@ -154,7 +170,7 @@ namespace graTakCzyNieLibrary
                 engineResult.ErrorMessage = "Player not found! " + player.Name;
                 return engineResult;
             }
-            else if (targetedPlayer.ImprisonedTo > moveCounter)
+            else if (targetedPlayer.ImprisonedTo > MoveCounter)
             {
                 engineResult.Succedeed = false;
                 engineResult.Player = targetedPlayer;
@@ -188,3 +204,4 @@ namespace graTakCzyNieLibrary
         }
     }
 }
+
