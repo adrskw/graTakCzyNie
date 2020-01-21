@@ -19,6 +19,8 @@ namespace graTakCzyNieLibrary
 
         private async void CreateBoard(int fieldNumber)
         {
+            CreatedBoard = null;
+
             if (CreatedBoard == null)
             {
                 CreatedBoard = new Dictionary<int, Field>() { { 0, Field.Start } };
@@ -52,5 +54,6 @@ namespace graTakCzyNieLibrary
                 return field;
             });
         }
+
     }
 }
