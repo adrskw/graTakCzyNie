@@ -8,6 +8,7 @@ namespace graTakCzyNieLibrary
 {
     public class Player
     {
+        public int Id { get; }
         public string Name { get; }
         public string Color { get; }
         public bool IsComputer { get; }
@@ -16,8 +17,9 @@ namespace graTakCzyNieLibrary
         public int CurrentPosition { get; set; }
         public int ImprisonedTo { get; set; }
 
-        public Player(string name, string color, bool isComputer = false)
+        public Player(int id, string name, string color, bool isComputer = false)
         {
+            Id = id;
             Name = name;
             Color = color;
             IsComputer = isComputer;
