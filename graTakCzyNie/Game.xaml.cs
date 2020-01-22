@@ -27,6 +27,7 @@ namespace graTakCzyNie
         private byte GameBoardWidth { get; } = 14;
         private byte GameBoardHeight { get; } = 12;
         private Dictionary<int, TextBlock> playerNameTextBlocks = new Dictionary<int, TextBlock>();
+        private int currentTurnPlayerId = 0;
         private readonly DoubleAnimation diceLoadingAnimation = new DoubleAnimation
         {
             From = 0,
@@ -132,7 +133,7 @@ namespace graTakCzyNie
         /// Generowanie kostki do gry
         /// </summary>
         /// <param name="number">Liczba od 1 do 6</param>
-        private async void GenerateDice(byte number)
+        private async void GenerateDice(int number)
         {
             void GenerateDot(Grid diceGridElement, int x, int y)
             {
@@ -146,7 +147,8 @@ namespace graTakCzyNie
                 Grid.SetRow(dot, y);
                 diceGridElement.Children.Add(dot);
             }
-            
+            ButtonRollDice.IsEnabled = false;
+
             GridDice.BeginAnimation(OpacityProperty, diceGridFadeOutAnimation);
             await Task.Delay(300);
 
@@ -197,6 +199,7 @@ namespace graTakCzyNie
             GridDice.BeginAnimation(OpacityProperty, diceGridFadeInAnimation);
             GridDice.Visibility = Visibility.Visible;
             MediaElementDiceLoading.Visibility = Visibility.Collapsed;
+            ButtonRollDice.IsEnabled = true;
         }
 
         /// <summary>
@@ -263,6 +266,51 @@ namespace graTakCzyNie
         {
             MediaElementDiceLoading.Position = new TimeSpan(0, 0, 1);
             MediaElementDiceLoading.Play();
+        }
+
+        private async void ButtonRollDice_Click(object sender, RoutedEventArgs e)
+        {
+            int randomResult = await Cube.GetRandomResult(1, 6);
+            GenerateDice(randomResult);
+            
+            Player player = engine.PlayersList.FirstOrDefault(f => f.Id == currentTurnPlayerId);
+            EngineResult engineResult = await engine.Move(player, randomResult);
+
+            SetPlayerTurn(engine.NextTurnPlayerId);
+            currentTurnPlayerId = engine.NextTurnPlayerId;
+
+            if (engineResult.Succedeed)
+            {
+                string displayedMessage = "";
+
+                switch (engineResult.Field)
+                {
+                    case Field.Meta:
+                        displayedMessage = string.Format($"Gracz {0} zwyciężył i dotarł na metę jako pierwszy. Gratulacje!", player.Name);
+                        // to do: endGame
+                        break;
+                    case Field.Question:
+                        // to do: question
+                        break;
+                    case Field.Penalty:
+                        displayedMessage = string.Format($"{0} miałeś pecha i trafiłeś na pole karne. Cofasz się o 3 pola", player.Name);
+                        break;
+                    case Field.Bonus:
+                        displayedMessage = string.Format($"{0}, szczęście Ci dopisało! Idziesz 3 pola do przodu", player.Name);
+                        break;
+                    case Field.Trap:
+                        displayedMessage = string.Format($"Uwaga pułapka! {0} został uwięziony na 3 tury", player.Name);
+                        break;
+                }
+
+                // to do: print player pawn on board
+
+                MessageBox.Show(displayedMessage);
+            }
+            else
+            {
+                MessageBox.Show(engineResult.ErrorMessage);
+            }
         }
     }
 }

@@ -10,8 +10,8 @@ namespace graTakCzyNieLibrary
     {
         private Board board;
         public QuestionDatabase qDatabase { get; set; }
-
         public int MoveCounter { get; private set; } = 0;
+        public int NextTurnPlayerId { get; private set; } = 1;
         private bool gameRunning = false;
 
         public List<Player> PlayersList { get; private set; } = new List<Player>();
@@ -97,6 +97,15 @@ namespace graTakCzyNieLibrary
         public async Task<EngineResult> Move(Player player, int number)
         {
             EngineResult engineResult = new EngineResult();
+            
+            if (PlayersList.Count > player.Id + 1)
+            {
+                NextTurnPlayerId = player.Id + 1;
+            }
+            else
+            {
+                NextTurnPlayerId = 0;
+            }
 
             var targetedPlayer = PlayersList.FirstOrDefault(f => f.Name == player.Name);
             if (targetedPlayer == null)
