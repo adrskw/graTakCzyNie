@@ -55,6 +55,7 @@ namespace graTakCzyNie
             GenerateBoard(GameBoardWidth, GameBoardHeight);
             GenerateDice(6);
             GeneratePlayersList();
+            SetPlayerTurn(0);
         }
 
         /// <summary>
@@ -234,6 +235,24 @@ namespace graTakCzyNie
                 playerNameTextBlocks.Add(player.Id, textBlock);
 
                 currentPlayer++;
+            }
+        }
+
+        /// <summary>
+        /// Wyświetlenie tury danego gracza
+        /// </summary>
+        /// <param name="id">id gracza</param>
+        private void SetPlayerTurn(int id)
+        {
+            playerNameTextBlocks[id].FontWeight = FontWeights.Bold;
+
+            if (id - 1 < 0)
+            {
+                playerNameTextBlocks[playerNameTextBlocks.Count - 1].FontWeight = FontWeights.Normal;
+            }
+            else
+            {
+                playerNameTextBlocks[id - 1].FontWeight = FontWeights.Normal;
             }
         }
 
