@@ -15,6 +15,8 @@ namespace graTakCzyNieLibrary
 
     public class QuestionDatabase
     {
+        private Random random = new Random();
+
         private List<Question> questions = new List<Question>()
         {
             new Question {Id = 1, QuestionText = "Czy jestem fajny?", CorrectAnswer = true},
@@ -26,8 +28,7 @@ namespace graTakCzyNieLibrary
         {
             return await Task.Run(() =>
             {
-                Random random = new Random();
-                var question = questions.FirstOrDefault(f => f.Id == random.Next(1, questions.Count));
+                Question question = questions[random.Next(1, questions.Count)];
                 return new Question
                 {
                     Id = question.Id,
