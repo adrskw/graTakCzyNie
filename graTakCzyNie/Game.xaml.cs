@@ -286,20 +286,20 @@ namespace graTakCzyNie
                 switch (engineResult.Field)
                 {
                     case Field.Meta:
-                        displayedMessage = string.Format($"Gracz {0} zwyciężył i dotarł na metę jako pierwszy. Gratulacje!", player.Name);
+                        displayedMessage = string.Format("Gracz {0} zwyciężył i dotarł na metę jako pierwszy. Gratulacje!", player.Name);
                         // to do: endGame
                         break;
                     case Field.Question:
                         // to do: question
                         break;
                     case Field.Penalty:
-                        displayedMessage = string.Format($"{0} miałeś pecha i trafiłeś na pole karne. Cofasz się o 3 pola", player.Name);
+                        displayedMessage = string.Format("{0} miałeś pecha i trafiłeś na pole karne. Cofasz się o 3 pola", player.Name);
                         break;
                     case Field.Bonus:
-                        displayedMessage = string.Format($"{0}, szczęście Ci dopisało! Idziesz 3 pola do przodu", player.Name);
+                        displayedMessage = string.Format("{0}, szczęście Ci dopisało! Idziesz 3 pola do przodu", player.Name);
                         break;
                     case Field.Trap:
-                        displayedMessage = string.Format($"Uwaga pułapka! {0} został uwięziony na 3 tury", player.Name);
+                        displayedMessage = string.Format("Uwaga pułapka! {0} został uwięziony na 3 tury", player.Name);
                         break;
                 }
 
