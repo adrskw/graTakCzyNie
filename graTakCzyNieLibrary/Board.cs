@@ -25,7 +25,7 @@ namespace graTakCzyNieLibrary
             {
                 CreatedBoard = new Dictionary<int, Field>() { { 0, Field.Start } };
             }
-            for (int i = 1; i <= fieldNumber; i++)
+            for (int i = 1; i < fieldNumber; i++)
             {
                 if (i == fieldNumber)
                 {
@@ -49,7 +49,21 @@ namespace graTakCzyNieLibrary
         {
             return await Task.Run(() =>
             {
-                var result = player.CurrentPosition += fieldNumber;
+                var result = player.CurrentPosition + fieldNumber;
+
+                if (result < 0)
+                {
+                    result = player.CurrentPosition = 0;
+                }
+                else if (result >= CreatedBoard.Count)
+                {
+                    result = player.CurrentPosition = CreatedBoard.Count - 1;
+                }
+                else
+                {
+                    player.CurrentPosition = result;
+                }
+
                 var field = player.CurrentField = CreatedBoard.FirstOrDefault(f => f.Key == result).Value;
                 return field;
             });

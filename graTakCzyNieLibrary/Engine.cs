@@ -97,7 +97,8 @@ namespace graTakCzyNieLibrary
         public async Task<EngineResult> Move(Player player, int number)
         {
             EngineResult engineResult = new EngineResult();
-            
+            MoveCounter++;
+
             if (PlayersList.Count > player.Id + 1)
             {
                 NextTurnPlayerId = player.Id + 1;
@@ -162,9 +163,6 @@ namespace graTakCzyNieLibrary
                         ErrorMessage = "Problem with Board! Returns: " + boardResult
                     };
             }
-
-            MoveCounter++;
-
             return engineResult;
         }
 
