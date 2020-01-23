@@ -27,6 +27,7 @@ namespace graTakCzyNie
         private byte GameBoardWidth { get; } = 14;
         private byte GameBoardHeight { get; } = 12;
         private Dictionary<int, TextBlock> playerNameTextBlocks = new Dictionary<int, TextBlock>();
+        private Dictionary<int, Rectangle> playersPawnsRectangles = new Dictionary<int, Rectangle>();
         private int currentTurnPlayerId = 0;
         private readonly DoubleAnimation diceLoadingAnimation = new DoubleAnimation
         {
@@ -57,6 +58,12 @@ namespace graTakCzyNie
             GenerateDice(6);
             GeneratePlayersList();
             SetPlayerTurn(0);
+
+            // zainicjowane wyświetlania pionków na planszy
+            foreach (Player player in engine.PlayersList)
+            {
+                GeneratePlayersPawnOnBoard(player);
+            }
         }
 
         /// <summary>
@@ -260,6 +267,66 @@ namespace graTakCzyNie
         }
 
         /// <summary>
+        /// Dodawanie odpowiednich marginesów dla wszystkich pionków na danym polu
+        /// </summary>
+        /// <param name="fieldGrid">grid pola</param>
+        private void AddMarginsToPawnsOnField(UniformGrid fieldGrid)
+        {
+            for (int i = 0; i < fieldGrid.Children.Count; i++)
+            {
+                Thickness pawnMargin;
+
+                switch (i)
+                {
+                    case 1:
+                        pawnMargin = new Thickness(2, 4, 4, 2);
+                        break;
+                    case 2:
+                        pawnMargin = new Thickness(4, 2, 2, 4);
+                        break;
+                    case 3:
+                        pawnMargin = new Thickness(2, 2, 4, 4);
+                        break;
+                    case 0:
+                    default:
+                        pawnMargin = new Thickness(4, 4, 2, 2);
+                        break;
+                }
+
+                Rectangle pawn = fieldGrid.Children[i] as Rectangle;
+                pawn.Margin = pawnMargin;
+            }
+        }
+        
+        /// <summary>
+        /// Generowanie pionka na planszy
+        /// </summary>
+        /// <param name="player">obiekt gracza</param>
+        private void GeneratePlayersPawnOnBoard(Player player)
+        {
+            Rectangle oldPawn;
+            if (playersPawnsRectangles.TryGetValue(player.Id, out oldPawn))
+            {
+                UniformGrid oldFieldGrid = VisualTreeHelper.GetParent(oldPawn) as UniformGrid;
+                oldFieldGrid.Children.Remove(oldPawn);
+                playersPawnsRectangles.Remove(player.Id);
+            }
+
+            Border field = GridGameBoard.Children[player.CurrentPosition] as Border;
+            UniformGrid fieldGrid = field.Child as UniformGrid;
+
+            Rectangle newPawn = new Rectangle
+            {
+                Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString(player.Color)),
+                Stretch = Stretch.UniformToFill
+            };
+            playersPawnsRectangles.Add(player.Id, newPawn);
+            fieldGrid.Children.Add(newPawn);
+
+            AddMarginsToPawnsOnField(fieldGrid);
+        }
+
+        /// <summary>
         /// Zapętlenie gifa wyświelającego wylosowaną liczbę na kostce
         /// </summary>
         private void MediaElementDiceLoading_MediaEnded(object sender, RoutedEventArgs e)
@@ -303,7 +370,8 @@ namespace graTakCzyNie
                         break;
                 }
 
-                // to do: print player pawn on board
+                await Task.Delay(1000);
+                GeneratePlayersPawnOnBoard(player);
 
                 MessageBox.Show(displayedMessage);
             }
