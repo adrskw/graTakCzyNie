@@ -28,7 +28,7 @@ namespace graTakCzyNieLibrary
         {
             return await Task.Run(() =>
             {
-                Question question = questions[random.Next(1, questions.Count)];
+                Question question = questions[random.Next(0, questions.Count)];
                 return new Question
                 {
                     Id = question.Id,
