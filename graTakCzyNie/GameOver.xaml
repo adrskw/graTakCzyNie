@@ -1,0 +1,18 @@
+﻿<Window x:Class="graTakCzyNie.GameOver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:graTakCzyNie"
+        mc:Ignorable="d"
+        Title="GameOver" Height="230" Width="450" WindowStartupLocation="CenterOwner" Topmost="True" ResizeMode="NoResize" WindowStyle="None" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}">
+    <DockPanel Margin="20">
+        <TextBlock DockPanel.Dock="Top" Margin="0" FontSize="18" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center">Koniec Gry!<LineBreak />Wygrał:</TextBlock>
+        <TextBlock DockPanel.Dock="Top" x:Name="TextBlockWinner" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+        <TextBlock DockPanel.Dock="Top" Margin="0 20" FontSize="18" FontWeight="Medium" TextWrapping="Wrap" TextAlignment="Center">Gratulacje!</TextBlock>
+        <UniformGrid DockPanel.Dock="Bottom" Columns="2" Rows="1">
+            <Button x:Name="ButtonMainMenu" Content="Menu główne" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20 0" Padding="20 5" FontSize="18" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue" Click="ButtonMainMenu_Click"></Button>
+            <Button x:Name="ButtonNewGame" Content="Nowa gra" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20 0" Padding="20 5" FontSize="18" FontWeight="Bold" Foreground="#304f50" Background="CadetBlue" Click="ButtonNewGame_Click"></Button>
+        </UniformGrid>
+    </DockPanel>
+</Window>
