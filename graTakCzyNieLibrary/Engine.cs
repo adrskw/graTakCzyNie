@@ -196,16 +196,25 @@ namespace graTakCzyNieLibrary
             }
             else if (checkAnswer == true)
             {
+
                 targetedPlayer.AddPoints(2);
+                await Move(targetedPlayer, 3);
                 engineResult.Succedeed = true;
-                engineResult.Question.CorrectAnswer = true;
+                engineResult.Question = new Question
+                {
+                    CorrectAnswer = true
+                };
                 return engineResult;
             }
             else
             {
                 targetedPlayer.SubtractPoints(1);
+                await Move(targetedPlayer, -3);
                 engineResult.Succedeed = true;
-                engineResult.Question.CorrectAnswer = false;
+                engineResult.Question = new Question
+                {
+                    CorrectAnswer = false
+                };
                 return engineResult;
             }
         }
