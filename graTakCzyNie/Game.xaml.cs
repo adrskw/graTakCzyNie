@@ -357,7 +357,26 @@ namespace graTakCzyNie
                         // to do: endGame
                         break;
                     case Field.Question:
-                        // to do: question
+                        await Task.Delay(1000);
+                        GeneratePlayersPawnOnBoard(player);
+
+                        Question question = engineResult.Question;
+                        QuestionAnswer questionAnswerWindow = new QuestionAnswer(question);
+                        questionAnswerWindow.Owner = this;
+
+                        bool? windowResult = questionAnswerWindow.ShowDialog();
+                        bool answer = windowResult.HasValue ? windowResult.Value : false;
+
+                        EngineResult checkAnswerEngineResult = await engine.PlayerAnswer(player, question.Id, answer);
+
+                        if(checkAnswerEngineResult.Succedeed && checkAnswerEngineResult.Question.CorrectAnswer == true)
+                        {
+                            displayedMessage = string.Format("{0} poprawnie odpowiedziałeś na pytanie! Idziesz 3 pola do przodu", player.Name);
+                        }
+                        else
+                        {
+                            displayedMessage = string.Format("{0} błędnie odpowiedziałeś na pytanie! Cofasz się o 3 pola", player.Name);
+                        }
                         break;
                     case Field.Penalty:
                         displayedMessage = string.Format("{0} miałeś pecha i trafiłeś na pole karne. Cofasz się o 3 pola", player.Name);
