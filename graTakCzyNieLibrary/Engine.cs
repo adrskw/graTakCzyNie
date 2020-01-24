@@ -177,13 +177,6 @@ namespace graTakCzyNieLibrary
                 engineResult.ErrorMessage = "Player not found! " + player.Name;
                 return engineResult;
             }
-            else if (targetedPlayer.ImprisonedTo > MoveCounter)
-            {
-                engineResult.Succedeed = false;
-                engineResult.Player = targetedPlayer;
-                engineResult.ErrorMessage = "Player " + targetedPlayer.Name + " is in a trap";
-                return engineResult;
-            }
 
             engineResult.Player = targetedPlayer;
 
