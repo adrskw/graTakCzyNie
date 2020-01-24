@@ -150,7 +150,7 @@ namespace graTakCzyNieLibrary
                     engineResult.Succedeed = true;
                     break;
                 case Field.Trap:
-                    targetedPlayer.ImprisonedTo = MoveCounter + 3;
+                    targetedPlayer.ImprisonedTo = MoveCounter + 3 * PlayersList.Count + 1;
                     engineResult.Succedeed = true;
                     break;
                 case Field.Normal:
@@ -191,7 +191,7 @@ namespace graTakCzyNieLibrary
             {
 
                 targetedPlayer.AddPoints(2);
-                await Move(targetedPlayer, 3);
+                await board.MovePlayer(targetedPlayer, 3);
                 engineResult.Succedeed = true;
                 engineResult.Question = new Question
                 {
@@ -202,7 +202,7 @@ namespace graTakCzyNieLibrary
             else
             {
                 targetedPlayer.SubtractPoints(1);
-                await Move(targetedPlayer, -3);
+                await board.MovePlayer(targetedPlayer, -3);
                 engineResult.Succedeed = true;
                 engineResult.Question = new Question
                 {
