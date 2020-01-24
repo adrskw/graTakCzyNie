@@ -338,7 +338,6 @@ namespace graTakCzyNie
         private async void ButtonRollDice_Click(object sender, RoutedEventArgs e)
         {
             int randomResult = await Cube.GetRandomResult(1, 6);
-            GenerateDice(randomResult);
             
             Player player = engine.PlayersList.FirstOrDefault(f => f.Id == currentTurnPlayerId);
             EngineResult engineResult = await engine.Move(player, randomResult);
@@ -348,6 +347,7 @@ namespace graTakCzyNie
 
             if (engineResult.Succedeed)
             {
+                GenerateDice(randomResult);
                 string displayedMessage = "";
 
                 switch (engineResult.Field)
