@@ -109,17 +109,23 @@ namespace graTakCzyNieLibrary
             }
 
             var targetedPlayer = PlayersList.FirstOrDefault(f => f.Name == player.Name);
-            if (targetedPlayer == null)
+            if (!gameRunning)
             {
                 engineResult.Succedeed = false;
-                engineResult.ErrorMessage = "Player not found! " + player.Name;
+                engineResult.ErrorMessage = "Gra nie jest uruchomiona!";
+                return engineResult;
+            }
+            else if (targetedPlayer == null)
+            {
+                engineResult.Succedeed = false;
+                engineResult.ErrorMessage = "Nie znaleziono takiego gracza! " + player.Name;
                 return engineResult;
             }
             else if (targetedPlayer.ImprisonedTo > MoveCounter)
             {
                 engineResult.Succedeed = false;
                 engineResult.Player = targetedPlayer;
-                engineResult.ErrorMessage = "Player " + targetedPlayer.Name + " is in a trap";
+                engineResult.ErrorMessage = "Gracz " + targetedPlayer.Name + " jest w pułapce";
                 return engineResult;
             }
 
@@ -156,12 +162,6 @@ namespace graTakCzyNieLibrary
                 case Field.Normal:
                     engineResult.Succedeed = true;
                     break;
-                default:
-                    return new EngineResult
-                    {
-                        Succedeed = false,
-                        ErrorMessage = "Problem with Board! Returns: " + boardResult
-                    };
             }
             return engineResult;
         }
@@ -174,7 +174,7 @@ namespace graTakCzyNieLibrary
             if (targetedPlayer == null)
             {
                 engineResult.Succedeed = false;
-                engineResult.ErrorMessage = "Player not found! " + player.Name;
+                engineResult.ErrorMessage = "Nie znaleziono takiego gracza! " + player.Name;
                 return engineResult;
             }
 
@@ -184,10 +184,10 @@ namespace graTakCzyNieLibrary
             if (checkAnswer == null)
             {
                 engineResult.Succedeed = false;
-                engineResult.ErrorMessage = "Question do not exists!";
+                engineResult.ErrorMessage = $"Pytanie o id {questionId} nie istnieje!";
                 return engineResult;
             }
-            else if (checkAnswer == true)
+            else if (checkAnswer.Value)
             {
 
                 targetedPlayer.AddPoints(2);

@@ -378,6 +378,9 @@ namespace graTakCzyNie
                 {
                     case Field.Meta:
                         displayedMessage = string.Format("Gracz {0} zwyciężył i dotarł na metę jako pierwszy. Gratulacje!", player.Name);
+                        GameOver gameOver = new GameOver(player, this);
+                        gameOver.Owner = this;
+                        gameOver.ShowDialog();
                         break;
                     case Field.Question:
                         await Task.Delay(1000);
@@ -417,12 +420,6 @@ namespace graTakCzyNie
 
                 MessageBox.Show(displayedMessage);
 
-                if (engineResult.Field == Field.Meta)
-                {
-                    GameOver gameOver = new GameOver(player, this);
-                    gameOver.Owner = this;
-                    gameOver.ShowDialog();
-                }
             }
             else
             {
