@@ -192,8 +192,6 @@ namespace graTakCzyNieLibrary
             }
             else if (checkAnswer.Value)
             {
-
-                targetedPlayer.AddPoints(2);
                 await board.MovePlayer(targetedPlayer, 3);
                 engineResult.Succedeed = true;
                 engineResult.Question = new Question
@@ -204,7 +202,6 @@ namespace graTakCzyNieLibrary
             }
             else
             {
-                targetedPlayer.SubtractPoints(1);
                 await board.MovePlayer(targetedPlayer, -3);
                 engineResult.Succedeed = true;
                 engineResult.Question = new Question

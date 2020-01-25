@@ -15,27 +15,25 @@ namespace graTakCzyNieLibrary
         public Board(int fieldNumber)
         {
             CreateBoard(fieldNumber);
-            int asd = 0;
         }
 
         private void CreateBoard(int fieldNumber)
         {
-            CreatedBoard = null;
-
             if (CreatedBoard == null)
             {
                 CreatedBoard = new Dictionary<int, Field>() { { 0, Field.Start } };
-            }
-            for (int i = 1; i < fieldNumber; i++)
-            {
-                if (i == fieldNumber - 1)
+
+                for (int i = 1; i < fieldNumber; i++)
                 {
-                    CreatedBoard.Add(i, Field.Meta);
-                    continue;
+                    if (i == fieldNumber - 1)
+                    {
+                        CreatedBoard.Add(i, Field.Meta);
+                        continue;
+                    }
+                    CreatedBoard.Add(i, GetRandomFieldAction());
                 }
-                CreatedBoard.Add(i, GetRandomFieldAction());
             }
-        }      
+        }
 
         private Field GetRandomFieldAction()
         {

@@ -12,7 +12,6 @@ namespace graTakCzyNieLibrary
         public string Name { get; }
         public string Color { get; }
         public bool IsComputer { get; }
-        public ushort Score { get; set; }
         public Field CurrentField { get; set; }
         public int CurrentPosition { get; set; }
         public int ImprisonedTo { get; set; }
@@ -23,21 +22,7 @@ namespace graTakCzyNieLibrary
             Name = name;
             Color = color;
             IsComputer = isComputer;
-            Score = 0;
             CurrentField = Field.Start;
-        }
-
-        public void AddPoints(ushort points)
-        {
-            Score += points;
-        }
-
-        public void SubtractPoints(ushort points)
-        {
-            if ((Score - points) >= 0)
-                Score -= points;
-            else
-                Score = 0;
         }
     }
 }
