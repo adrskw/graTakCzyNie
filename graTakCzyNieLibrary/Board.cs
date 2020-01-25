@@ -15,9 +15,10 @@ namespace graTakCzyNieLibrary
         public Board(int fieldNumber)
         {
             CreateBoard(fieldNumber);
+            int asd = 0;
         }
 
-        private async void CreateBoard(int fieldNumber)
+        private void CreateBoard(int fieldNumber)
         {
             CreatedBoard = null;
 
@@ -27,21 +28,29 @@ namespace graTakCzyNieLibrary
             }
             for (int i = 1; i < fieldNumber; i++)
             {
-                if (i == fieldNumber)
+                if (i == fieldNumber - 1)
                 {
                     CreatedBoard.Add(i, Field.Meta);
                     continue;
                 }
-                CreatedBoard.Add(i, await GetRandomFieldAction());
+                CreatedBoard.Add(i, GetRandomFieldAction());
             }
         }      
 
-        private async Task<Field> GetRandomFieldAction()
+        private Field GetRandomFieldAction()
         {
-            Array val = Enum.GetValues(typeof(Field));
-            Field rndField = (Field)val.GetValue(rnd.Next(val.Length));
-            if (rndField == Field.Start || rndField == Field.Meta)
-                return await GetRandomFieldAction();
+            List<Field> fieldTypes = Enum.GetValues(typeof(Field)).Cast<Field>().ToList();
+            fieldTypes.Remove(Field.Start);
+            fieldTypes.Remove(Field.Meta);
+            fieldTypes.Add(Field.Normal);
+            fieldTypes.Add(Field.Normal);
+            fieldTypes.Add(Field.Normal);
+            fieldTypes.Add(Field.Normal);
+            fieldTypes.Add(Field.Question);
+            fieldTypes.Add(Field.Question);
+
+            Field rndField = fieldTypes[rnd.Next(0, fieldTypes.Count - 1)];
+
             return rndField;
         }
 
