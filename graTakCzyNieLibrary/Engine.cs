@@ -15,7 +15,11 @@ namespace graTakCzyNieLibrary
         private bool gameRunning = false;
 
         public List<Player> PlayersList { get; private set; } = new List<Player>();
-
+        /// <summary>
+        /// Tworzy plansze i startuje gre
+        /// </summary>
+        /// <param name="fieldNumber">Liczba pól planszy</param>
+        /// <returns></returns>
         public async Task<EngineResult> StartGame(int fieldNumber)
         {
             return await Task.Run(() =>
@@ -49,6 +53,11 @@ namespace graTakCzyNieLibrary
             });
         }
 
+        /// <summary>
+        /// Tworzy liste graczy
+        /// </summary>
+        /// <param name="players">Lista graczy</param>
+        /// <returns></returns>
         public async Task<EngineResult> CreatePlayers(List<Player> players)
         {
             return await Task.Run(() =>
@@ -95,6 +104,12 @@ namespace graTakCzyNieLibrary
             });
         }
 
+        /// <summary>
+        /// Przemieszcza graczy po planszy i w zależności od tego na jakim polu gracz się znajdzie, podejmuje odpowiednie akcje
+        /// </summary>
+        /// <param name="player">Gracz</param>
+        /// <param name="number">Liczba pól na planszy</param>
+        /// <returns></returns>
         public async Task<EngineResult> Move(Player player, int number)
         {
             EngineResult engineResult = new EngineResult();
@@ -169,6 +184,13 @@ namespace graTakCzyNieLibrary
             return engineResult;
         }
 
+        /// <summary>
+        /// Sprawdza odpowiedź
+        /// </summary>
+        /// <param name="player">Gracz</param>
+        /// <param name="questionId">Id pytania</param>
+        /// <param name="answer">Odpowiedź gracza</param>
+        /// <returns></returns>
         public async Task<EngineResult> PlayerAnswer(Player player, int questionId, bool answer)
         {
             EngineResult engineResult = new EngineResult();

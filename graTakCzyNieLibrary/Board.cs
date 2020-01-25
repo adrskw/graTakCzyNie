@@ -17,6 +17,10 @@ namespace graTakCzyNieLibrary
             CreateBoard(fieldNumber);
         }
 
+        /// <summary>
+        /// Tworzy plansze o określonej liczbie pól
+        /// </summary>
+        /// <param name="fieldNumber">Liczba pól</param>
         private void CreateBoard(int fieldNumber)
         {
             if (CreatedBoard == null)
@@ -52,6 +56,12 @@ namespace graTakCzyNieLibrary
             return rndField;
         }
 
+        /// <summary>
+        /// Przemieszcza gracza po planszy
+        /// </summary>
+        /// <param name="player">Gracz</param>
+        /// <param name="fieldNumber">Liczba pól</param>
+        /// <returns></returns>
         public async Task<Field> MovePlayer(Player player, int fieldNumber)
         {
             return await Task.Run(() =>

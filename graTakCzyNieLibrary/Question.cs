@@ -38,6 +38,10 @@ namespace graTakCzyNieLibrary
             new Question {Id = 17, QuestionText = "Czy Stefan Żeromski jest autorem Lalki", CorrectAnswer = false}
         };
         
+        /// <summary>
+        /// Zwraca losowe pytanie z listy
+        /// </summary>
+        /// <returns></returns>
         public async Task<Question> GetRandomQuestion()
         {
             return await Task.Run(() =>
@@ -51,6 +55,13 @@ namespace graTakCzyNieLibrary
             });
 
         }
+
+        /// <summary>
+        /// Sprawdza odpowiedź
+        /// </summary>
+        /// <param name="questionId">ID pytania</param>
+        /// <param name="answer">Odpowiedź gracza</param>
+        /// <returns></returns>
         public async Task<bool?> CheckAnswer(int questionId, bool answer)
         {
             return await Task.Run(() =>
