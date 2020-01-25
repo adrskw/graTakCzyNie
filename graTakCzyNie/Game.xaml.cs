@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -362,6 +363,9 @@ namespace graTakCzyNie
 
         private async void ButtonRollDice_Click(object sender, RoutedEventArgs e)
         {
+            SoundPlayer rollDiceSound = new SoundPlayer(Properties.Resources.rollDiceSound);
+            rollDiceSound.Play();
+
             int randomResult = await Cube.GetRandomResult(1, 6);
             
             Player player = engine.PlayersList.FirstOrDefault(f => f.Id == currentTurnPlayerId);
@@ -419,8 +423,10 @@ namespace graTakCzyNie
                 await Task.Delay(1000);
                 GeneratePlayersPawnOnBoard(player);
 
-                MessageBox.Show(displayedMessage);
-
+                if (engineResult.Field != Field.Normal)
+                {
+                    MessageBox.Show(displayedMessage);
+                }
             }
             else
             {
