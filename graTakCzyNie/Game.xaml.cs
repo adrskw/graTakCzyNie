@@ -243,7 +243,8 @@ namespace graTakCzyNie
                 TextBlock textBlock = new TextBlock
                 {
                     Text = player.Name,
-                    Margin = new Thickness(10, 0, 0, 10)
+                    Margin = new Thickness(10, 0, 0, 10),
+                    TextWrapping = TextWrapping.Wrap
                 };
 
                 if (player.IsComputer)
