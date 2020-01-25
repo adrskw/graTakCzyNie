@@ -28,6 +28,16 @@ namespace graTakCzyNie
         private byte GameBoardHeight { get; } = 12;
         private Dictionary<int, TextBlock> playerNameTextBlocks = new Dictionary<int, TextBlock>();
         private Dictionary<int, Rectangle> playersPawnsRectangles = new Dictionary<int, Rectangle>();
+        private Dictionary<Field, Color> fieldsColors = new Dictionary<Field, Color>
+        {
+            { Field.Start, Colors.Moccasin },
+            { Field.Meta, Colors.BurlyWood },
+            { Field.Question, Colors.LightSeaGreen },
+            { Field.Penalty, Colors.LightCoral },
+            { Field.Bonus, Colors.MediumSpringGreen },
+            { Field.Trap, Colors.Gray },
+            { Field.Normal, Colors.LightGray },
+        };
         private int currentTurnPlayerId = 0;
         private readonly DoubleAnimation diceLoadingAnimation = new DoubleAnimation
         {
@@ -58,6 +68,7 @@ namespace graTakCzyNie
             GenerateDice(6);
             GeneratePlayersList();
             SetPlayerTurn(0);
+            MatchFieldColorToFieldType();
 
             // zainicjowane wyświetlania pionków na planszy
             foreach (Player player in engine.PlayersList)
@@ -324,6 +335,19 @@ namespace graTakCzyNie
             fieldGrid.Children.Add(newPawn);
 
             AddMarginsToPawnsOnField(fieldGrid);
+        }
+
+        /// <summary>
+        /// Zmiana koloru pola w odniesieniu do jego typu
+        /// </summary>
+        private void MatchFieldColorToFieldType()
+        {
+            for (int i = 0; i < Board.CreatedBoard.Count; i++)
+            {
+                Border field = GridGameBoard.Children[i] as Border;
+                field.Background = new SolidColorBrush(fieldsColors[Board.CreatedBoard[i]]);
+            }
+            
         }
 
         /// <summary>
