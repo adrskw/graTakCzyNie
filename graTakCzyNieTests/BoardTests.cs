@@ -11,14 +11,14 @@ namespace graTakCzyNieTests
     [TestClass]
     public class BoardTests
     {
-        Board board;
-
         [TestMethod]
-        public void CreateBoardSuccess()
+        public async Task If_MovePlayerSuccedeed_ReturnFieldType()
         {
-            board = new Board(100);
+            Board board = new Board(50);
 
-            Assert.IsNotNull(Board.CreatedBoard);
+            var result = await board.MovePlayer(new Player(1, "Gracz", "Red"), 5);
+
+            Assert.IsInstanceOfType(result, typeof(Field));
         }
     }
 }
