@@ -40,6 +40,7 @@ namespace graTakCzyNieLibrary
                 {
                     qDatabase = new QuestionDatabase();
                     board = new Board(fieldNumber);
+                    gameRunning = true;
                     return new EngineResult
                     {
                         Succedeed = true
@@ -97,7 +98,6 @@ namespace graTakCzyNieLibrary
         public async Task<EngineResult> Move(Player player, int number)
         {
             EngineResult engineResult = new EngineResult();
-            MoveCounter++;
 
             if (PlayersList.Count > player.Id + 1)
             {
@@ -121,7 +121,10 @@ namespace graTakCzyNieLibrary
                 engineResult.ErrorMessage = "Nie znaleziono takiego gracza! " + player.Name;
                 return engineResult;
             }
-            else if (targetedPlayer.ImprisonedTo > MoveCounter)
+
+            MoveCounter++;
+
+            if (targetedPlayer.ImprisonedTo > MoveCounter)
             {
                 engineResult.Succedeed = false;
                 engineResult.Player = targetedPlayer;
