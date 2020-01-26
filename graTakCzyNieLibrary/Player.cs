@@ -11,7 +11,6 @@ namespace graTakCzyNieLibrary
         public int Id { get; }
         public string Name { get; }
         public string Color { get; }
-        public bool IsComputer { get; }
         public Field CurrentField { get; set; }
         public int CurrentPosition { get; set; }
         public int ImprisonedTo { get; set; }
@@ -21,7 +20,6 @@ namespace graTakCzyNieLibrary
             Id = id;
             Name = name;
             Color = color;
-            IsComputer = isComputer;
             CurrentField = Field.Start;
         }
     }

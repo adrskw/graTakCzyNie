@@ -248,10 +248,6 @@ namespace graTakCzyNie
                     TextWrapping = TextWrapping.Wrap
                 };
 
-                if (player.IsComputer)
-                {
-                    textBlock.Text += " (komputer)";
-                }
                 Grid.SetColumn(textBlock, 1);
                 Grid.SetRow(textBlock, currentPlayer);
                 GridPlayersList.Children.Add(textBlock);

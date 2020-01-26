@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:graTakCzyNie"
         mc:Ignorable="d"
-        Title="Game" MinHeight="600" MinWidth="800" Height="600" Width="800">
+        Title="graTakCzyNie - Gra" MinHeight="600" MinWidth="800" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="33*"></ColumnDefinition>
+            <ColumnDefinition Width="560*"/>
             <ColumnDefinition Width="200"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" x:Name="GridGameBoard">
+        <Grid Grid.Column="0" x:Name="GridGameBoard" Grid.ColumnSpan="2" Margin="0,0,0.334,-0.333">
             <!-- Przykładowy wygląd pionków na polu
             <Border Grid.Column="1" Grid.Row="1" Background="Blue" BorderBrush="Silver" BorderThickness="1">
                 <UniformGrid Columns="2" Rows="2">
@@ -23,11 +24,11 @@
             </Border> -->
         </Grid>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 5">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="559.533,5,0.334,4.667" Grid.ColumnSpan="2">
             <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10">
+        <StackPanel Orientation="Vertical" Grid.Column="2" Margin="9.666,10,10.334,9.667">
             <TextBlock FontSize="16" FontWeight="Bold">Gracze:</TextBlock>
             <Grid Margin="0 5" x:Name="GridPlayersList">
                 <Grid.ColumnDefinitions>

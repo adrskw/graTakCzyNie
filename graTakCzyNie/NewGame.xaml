@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:graTakCzyNie"
         mc:Ignorable="d"
-        Title="New Game" Height="300" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="graTakCzyNie - Nowa gra" Height="300" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -52,31 +52,15 @@
 
                 <Rectangle x:Name="Player0_Color" Grid.Column="0" Grid.Row="0" Fill="Red" Margin="0 0 0 10"></Rectangle>
                 <TextBox x:Name="Player0_Name" Grid.Column="1" Grid.Row="0" Margin="20 0 20 10">gracz1</TextBox>
-                <ComboBox x:Name="Player0_Type" Grid.Column="2" Grid.Row="0" Margin="0 0 0 10">
-                    <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
-                    <ComboBoxItem>Komputer</ComboBoxItem>
-                </ComboBox>
 
                 <Rectangle x:Name="Player1_Color" Grid.Column="0" Grid.Row="1" Fill="Black" Margin="0 0 0 10"></Rectangle>
                 <TextBox x:Name="Player1_Name" Grid.Column="1" Grid.Row="1" Margin="20 0 20 10">gracz2</TextBox>
-                <ComboBox x:Name="Player1_Type" Grid.Column="2" Grid.Row="1" Margin="0 0 0 10">
-                    <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
-                    <ComboBoxItem>Komputer</ComboBoxItem>
-                </ComboBox>
 
                 <Rectangle x:Name="Player2_Color" Grid.Column="0" Grid.Row="2" Fill="Purple" Margin="0 0 0 10"></Rectangle>
                 <TextBox x:Name="Player2_Name" Grid.Column="1" Grid.Row="2" Margin="20 0 20 10">gracz3</TextBox>
-                <ComboBox x:Name="Player2_Type" Grid.Column="2" Grid.Row="2" Margin="0 0 0 10">
-                    <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
-                    <ComboBoxItem>Komputer</ComboBoxItem>
-                </ComboBox>
 
                 <Rectangle x:Name="Player3_Color" Grid.Column="0" Grid.Row="3" Fill="Green"></Rectangle>
                 <TextBox x:Name="Player3_Name" Grid.Column="1" Grid.Row="3" Margin="20 0">gracz4</TextBox>
-                <ComboBox x:Name="Player3_Type" Grid.Column="2" Grid.Row="3">
-                    <ComboBoxItem IsSelected="True">Gracz</ComboBoxItem>
-                    <ComboBoxItem>Komputer</ComboBoxItem>
-                </ComboBox>
             </Grid>
         </StackPanel>
     </Grid>

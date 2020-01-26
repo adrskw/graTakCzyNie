@@ -84,17 +84,7 @@ namespace graTakCzyNie
                 Rectangle colorRectangle = GridPlayerInfo.FindName("Player" + i + "_Color") as Rectangle;
                 string color = colorRectangle.Fill.ToString();
 
-                ComboBox typeComboBox = GridPlayerInfo.FindName("Player" + i + "_Type") as ComboBox;
-                ComboBoxItem typeSelectedItem = typeComboBox.SelectedItem as ComboBoxItem;
-                string type = typeSelectedItem.Content.ToString();
-                bool isComputer = false;
-
-                if (type == "Komputer")
-                {
-                    isComputer = true;
-                }
-
-                players.Add(new Player(i, name, color, isComputer));
+                players.Add(new Player(i, name, color));
             }
 
             return await engine.CreatePlayers(players);
@@ -113,27 +103,21 @@ namespace graTakCzyNie
                 case "2":
                     Player2_Color.Visibility =
                         Player2_Name.Visibility =
-                        Player2_Type.Visibility =
                         Player3_Color.Visibility =
-                        Player3_Name.Visibility =
-                        Player3_Type.Visibility = Visibility.Collapsed;
+                        Player3_Name.Visibility = Visibility.Collapsed;
                     break;
                 case "3":
-                    Player2_Color.Visibility = 
-                        Player2_Name.Visibility = 
-                        Player2_Type.Visibility = Visibility.Visible;
-                    Player3_Color.Visibility = 
-                        Player3_Name.Visibility =
-                        Player3_Type.Visibility = Visibility.Collapsed;
+                    Player2_Color.Visibility =
+                        Player2_Name.Visibility = Visibility.Visible;
+                    Player3_Color.Visibility =
+                        Player3_Name.Visibility = Visibility.Collapsed;
                     break;
                 case "4":
                 default:
                     Player2_Color.Visibility =
                         Player2_Name.Visibility =
-                        Player2_Type.Visibility =
                         Player3_Color.Visibility =
-                        Player3_Name.Visibility = 
-                        Player3_Type.Visibility = Visibility.Visible;
+                        Player3_Name.Visibility = Visibility.Visible;
                     break;
             }
         }

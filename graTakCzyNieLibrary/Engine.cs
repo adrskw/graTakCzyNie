@@ -93,7 +93,7 @@ namespace graTakCzyNieLibrary
                         };
                     }
 
-                    Player player = new Player(item.Id, item.Name, item.Color, item.IsComputer);
+                    Player player = new Player(item.Id, item.Name, item.Color);
                     PlayersList.Add(player);
                 }
 
