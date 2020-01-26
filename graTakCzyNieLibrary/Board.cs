@@ -14,6 +14,7 @@ namespace graTakCzyNieLibrary
 
         public Board(int fieldNumber)
         {
+            CreatedBoard = null;
             CreateBoard(fieldNumber);
         }
 

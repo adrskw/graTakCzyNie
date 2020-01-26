@@ -20,5 +20,22 @@ namespace graTakCzyNieTests
 
             Assert.IsInstanceOfType(result, typeof(Field));
         }
+
+        [TestMethod]
+        public void CreateBoard_Success()
+        {
+            Board board = new Board(50);
+
+            Assert.AreEqual(Board.CreatedBoard.Count, 50);
+        }
+
+        [TestMethod]
+        public void CreateBoard_Failed()
+        {
+            Board board = new Board(-5);
+
+            Assert.AreEqual(Board.CreatedBoard.Count, 1);
+            Assert.AreEqual(Board.CreatedBoard[0], Field.Start);
+        }
     }
 }
