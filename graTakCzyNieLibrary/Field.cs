@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
+    /// <summary>
+    /// Pola planszy
+    /// </summary>
     public enum Field
     {
         Start,

@@ -6,12 +6,28 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
+    /// <summary>
+    /// Silnik gry
+    /// </summary>
     public class Engine
     {
         private Board board;
+
+        /// <summary>
+        /// Dostęp do klasy z pytaniami
+        /// </summary>
         public QuestionDatabase qDatabase { get; set; }
+
+        /// <summary>
+        /// Licznik ruchów
+        /// </summary>
         public int MoveCounter { get; private set; } = 0;
+
+        /// <summary>
+        /// Który gracz jest następny w kolejce
+        /// </summary>
         public int NextTurnPlayerId { get; private set; } = 1;
+
         private bool gameRunning = false;
 
         public List<Player> PlayersList { get; private set; } = new List<Player>();

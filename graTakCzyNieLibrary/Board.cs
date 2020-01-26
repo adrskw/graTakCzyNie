@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
-
+    /// <summary>
+    /// Tworzy plansze i przesuwa po niej graczy
+    /// </summary>
     public class Board
     {
+        /// <summary>
+        /// Utworzona plansza
+        /// </summary>
         public static Dictionary<int, Field> CreatedBoard { get; private set; }
+
         private static Random rnd = new Random();
 
+        /// <summary>
+        /// Tworzy nową planszę o określonej liczbie pól
+        /// </summary>
+        /// <param name="fieldNumber">Liczba pól</param>
         public Board(int fieldNumber)
         {
             CreatedBoard = null;
