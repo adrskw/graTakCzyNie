@@ -6,13 +6,30 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
+    /// <summary>
+    /// Model pytań
+    /// </summary>
     public class Question
     {
+        /// <summary>
+        /// ID pytania
+        /// </summary>
         public int Id { get; set; }
+
+        /// <summary>
+        /// Treść pytania
+        /// </summary>
         public string QuestionText { get; set; }
+
+        /// <summary>
+        /// Czy odpowiedź jest prawidłowa
+        /// </summary>
         public bool? CorrectAnswer { get; set; }
     }
 
+    /// <summary>
+    /// Zawiera baze pytań, generuje losowe pytania, sprawdza odpowiedzi
+    /// </summary>
     public class QuestionDatabase
     {
         private Random random = new Random();

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za gracza
+    /// </summary>
     public class Player
     {
         /// <summary>
