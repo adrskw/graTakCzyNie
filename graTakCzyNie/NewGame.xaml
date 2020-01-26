@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:graTakCzyNie"
         mc:Ignorable="d"
-        Title="New Game" Height="300" Width="650" ResizeMode="NoResize">
+        Title="New Game" Height="300" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
