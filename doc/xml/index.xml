@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classgra_tak_czy_nie_library_1_1_board" kind="class"><name>graTakCzyNieLibrary::Board</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1ad2fbaaed3c77decc0464ecc8d5b8848c" kind="property"><name>CreatedBoard</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1a4ac7d02b1baca4f5e408ccafa48294e2" kind="variable"><name>rnd</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1ac3332513337c5b252090a227902fb284" kind="function"><name>Board</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1ad47ecd49e96de520589a1c2e263a4129" kind="function"><name>MovePlayer</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1aaf67228c442c4280838e219d8104add4" kind="function"><name>CreateBoard</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_board_1abe332cf061060432a59b8cd73b391a32" kind="function"><name>GetRandomFieldAction</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_cube" kind="class"><name>graTakCzyNieLibrary::Cube</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_cube_1a3f741a2c4420c6fbfba02777a1ed40e3" kind="variable"><name>random</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_cube_1a0f52ddc05e5e74eee7e0019c8252654e" kind="function"><name>GetRandomResult</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_engine" kind="class"><name>graTakCzyNieLibrary::Engine</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1ac52754d8ad0f8d52f1037ade479b598a" kind="variable"><name>board</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a5925d3b542869b23243698554af79d1c" kind="variable"><name>gameRunning</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a4b4d4d26c42b1100a99716fba1ed8c83" kind="property"><name>qDatabase</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a173684785b11a01394ecf1e55cbc1057" kind="property"><name>MoveCounter</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a1876a427c301aeaee641d6548f2b02e5" kind="property"><name>NextTurnPlayerId</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a515b0f9c1cfeecaf7921878c9e5d4654" kind="property"><name>PlayersList</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a5e4dd939f914e5c0d61c24b163af094f" kind="function"><name>StartGame</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1ab391677fb1aec97ec71a1b9cdbb46e35" kind="function"><name>CreatePlayers</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1aa5b0571b86e7d9258d2a87038da1e353" kind="function"><name>Move</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_1a2b125d87d07d4a19900f9ae34ab70cb1" kind="function"><name>PlayerAnswer</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_engine_result" kind="class"><name>graTakCzyNieLibrary::EngineResult</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_result_1a85728e339e1c53ee31cc9fbf6b6a6e1b" kind="property"><name>Succedeed</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_result_1ab5a3e7822915362a28e9473fd19f1fb2" kind="property"><name>Question</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_result_1aeb269d0f0b326f6f006888d7371e4814" kind="property"><name>Field</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_result_1a9f80a087d529a0e2fe03a3dd9638bb17" kind="property"><name>Player</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_engine_result_1a279e8adcd5341a33755f8b86b301b877" kind="property"><name>ErrorMessage</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_player" kind="class"><name>graTakCzyNieLibrary::Player</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1a2e2e3412317a37d07dc6ba117b1d0613" kind="property"><name>Id</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1ae44548273dee65e834c137b2d4e13c06" kind="property"><name>Name</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1ad122fbcb7e90550e97d18008f9d65fa7" kind="property"><name>Color</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1aae487dd3051554dd3048d36305c49279" kind="property"><name>CurrentField</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1ae46c1810793d31f2bfe2eaa25daa27d9" kind="property"><name>CurrentPosition</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1a3e82f3e3104d7238eb6efaac9791a6d2" kind="property"><name>ImprisonedTo</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_player_1aecdd534779809bd8780ce0f7b8aee134" kind="function"><name>Player</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_question" kind="class"><name>graTakCzyNieLibrary::Question</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_1ac4f59c9c95c4f36d32f72ce02d7cd8cd" kind="property"><name>Id</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_1a1cf202d152b2eb83d7d1d9cabd814110" kind="property"><name>QuestionText</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_1a7f95a27b2eedc44290b407879a6c785e" kind="property"><name>CorrectAnswer</name></member>
+  </compound>
+  <compound refid="classgra_tak_czy_nie_library_1_1_question_database" kind="class"><name>graTakCzyNieLibrary::QuestionDatabase</name>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a6506fcf9716c9d879605bdec678f9243" kind="variable"><name>random</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_database_1ac35a493686f808b929fb17e886f7e969" kind="variable"><name>questions</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a6aca08b71bb1fe750b0334810a76e1fc" kind="function"><name>GetRandomQuestion</name></member>
+    <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a65457b1976b86043ae19895a44125155" kind="function"><name>CheckAnswer</name></member>
+  </compound>
+  <compound refid="namespacegra_tak_czy_nie_library" kind="namespace"><name>graTakCzyNieLibrary</name>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" kind="enum"><name>Field</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eaa6122a65eaa676f700ae68d393054a37" kind="enumvalue"><name>Start</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eab6755d218d5f4e1cef9cce9cc39aeda9" kind="enumvalue"><name>Meta</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eaa97ea56b0e00b2379736ae60869ff66a" kind="enumvalue"><name>Question</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea78676254cca7a779014dc1960efb47e2" kind="enumvalue"><name>Penalty</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea3c0ee4bacc905ad4abb857127975acfc" kind="enumvalue"><name>Bonus</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea8b9038a4896d530d239f4af3bbb30357" kind="enumvalue"><name>Trap</name></member>
+    <member refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea960b44c579bc2f6818d2daaf9e4c16f0" kind="enumvalue"><name>Normal</name></member>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="_board_8cs" kind="file"><name>Board.cs</name>
+  </compound>
+  <compound refid="_cube_8cs" kind="file"><name>Cube.cs</name>
+  </compound>
+  <compound refid="_engine_8cs" kind="file"><name>Engine.cs</name>
+  </compound>
+  <compound refid="_engine_result_8cs" kind="file"><name>EngineResult.cs</name>
+  </compound>
+  <compound refid="_field_8cs" kind="file"><name>Field.cs</name>
+  </compound>
+  <compound refid="_player_8cs" kind="file"><name>Player.cs</name>
+  </compound>
+  <compound refid="_question_8cs" kind="file"><name>Question.cs</name>
+  </compound>
+</doxygenindex>

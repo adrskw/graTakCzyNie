@@ -1,0 +1,1118 @@
+AutoGen Definitions dummy;
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_board';
+  cp-name   = 'graTakCzyNieLibrary::Board';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1ac3332513337c5b252090a227902fb284';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Board';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldNumber';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '25';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy nową planszę o określonej liczbie pól
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="fieldNumber">Liczba pól</param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1ad47ecd49e96de520589a1c2e263a4129';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< Field >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'MovePlayer';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Player
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'player';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldNumber';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '76';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Przemieszcza gracza po planszy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="player">Gracz</param>
+<param name="fieldNumber">Liczba pól</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1ad2fbaaed3c77decc0464ecc8d5b8848c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static Dictionary< int, Field >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CreatedBoard';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Utworzona plansza
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1aaf67228c442c4280838e219d8104add4';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CreateBoard';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldNumber';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '35';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy plansze o określonej liczbie pól
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="fieldNumber">Liczba pól</param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1abe332cf061060432a59b8cd73b391a32';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'GetRandomFieldAction';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '53';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_board_1a4ac7d02b1baca4f5e408ccafa48294e2';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static Random
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'rnd';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new Random()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+      sec-mem-desc-line = '19';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy plansze i przesuwa po niej graczy
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_cube';
+  cp-name   = 'graTakCzyNieLibrary::Cube';
+  cp-section = {
+    sec-kind = 'public-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_cube_1a0f52ddc05e5e74eee7e0019c8252654e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static async Task< int >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'GetRandomResult';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'b';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Cube.cs';
+      sec-mem-desc-line = '21';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Losuje liczbę w podanym zakresie
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="a">Liczba początkowa</param>
+<param name="b">Liczba końcowa</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_cube_1a3f741a2c4420c6fbfba02777a1ed40e3';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static Random
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'random';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new Random()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Cube.cs';
+      sec-mem-desc-line = '14';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Cube.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Generuje losowa liczbę
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_engine';
+  cp-name   = 'graTakCzyNieLibrary::Engine';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a5e4dd939f914e5c0d61c24b163af094f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< EngineResult >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'StartGame';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldNumber';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '39';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy plansze i startuje gre
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="fieldNumber">Liczba pól planszy</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1ab391677fb1aec97ec71a1b9cdbb46e35';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< EngineResult >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CreatePlayers';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+List< Player >
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'players';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '77';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy liste graczy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="players">Lista graczy</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1aa5b0571b86e7d9258d2a87038da1e353';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< EngineResult >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Move';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Player
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'player';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'number';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '129';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Przemieszcza graczy po planszy i w zależności od tego na jakim polu gracz się znajdzie, podejmuje odpowiednie akcje
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="player">Gracz</param>
+<param name="number">Liczba pól na planszy</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a2b125d87d07d4a19900f9ae34ab70cb1';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< EngineResult >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'PlayerAnswer';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Player
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'player';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'questionId';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'answer';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '210';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Sprawdza odpowiedź
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="player">Gracz</param>
+<param name="questionId">Id pytania</param>
+<param name="answer">Odpowiedź gracza</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a4b4d4d26c42b1100a99716fba1ed8c83';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+QuestionDatabase
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'qDatabase';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '19';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Dostęp do klasy z pytaniami
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a173684785b11a01394ecf1e55cbc1057';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'MoveCounter';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 0
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Licznik ruchów
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a1876a427c301aeaee641d6548f2b02e5';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'NextTurnPlayerId';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 1
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '29';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Który gracz jest następny w kolejce
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a515b0f9c1cfeecaf7921878c9e5d4654';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+List< Player >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'PlayersList';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new List<Player>()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '33';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1ac52754d8ad0f8d52f1037ade479b598a';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Board
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'board';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '14';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_1a5925d3b542869b23243698554af79d1c';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'gameRunning';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= false
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+      sec-mem-desc-line = '31';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Silnik gry
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_engine_result';
+  cp-name   = 'graTakCzyNieLibrary::EngineResult';
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_result_1a85728e339e1c53ee31cc9fbf6b6a6e1b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Succedeed';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Informacja czy operacja się powiodła
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_result_1ab5a3e7822915362a28e9473fd19f1fb2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Question
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Question';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+      sec-mem-desc-line = '22';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Zawiera wylosowane pytanie
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_result_1aeb269d0f0b326f6f006888d7371e4814';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Field';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+      sec-mem-desc-line = '27';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Typ pola na którym znalazł się gracz
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_result_1a9f80a087d529a0e2fe03a3dd9638bb17';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Player
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Player';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+      sec-mem-desc-line = '32';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Gracz
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_engine_result_1a279e8adcd5341a33755f8b86b301b877';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ErrorMessage';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Zawiera błąd w przypadku niepowodzenia
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Model odpowiedzi klasy Engine
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_player';
+  cp-name   = 'graTakCzyNieLibrary::Player';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1aecdd534779809bd8780ce0f7b8aee134';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Player';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'id';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'name';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'color';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '51';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tworzy gracza i przypisuje mu pole startowe
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="id">ID Gracza</param>
+<param name="name">Nazwa Gracza</param>
+<param name="color">Kolor Gracza</param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1a2e2e3412317a37d07dc6ba117b1d0613';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Id';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+ID Gracza
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1ae44548273dee65e834c137b2d4e13c06';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Name';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '22';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Nazwa Gracza
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1ad122fbcb7e90550e97d18008f9d65fa7';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Color';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '27';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Kolor Gracza
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1aae487dd3051554dd3048d36305c49279';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CurrentField';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '32';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Obecne pole na planszy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1ae46c1810793d31f2bfe2eaa25daa27d9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CurrentPosition';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Obecna pozycja na planszy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_player_1a3e82f3e3104d7238eb6efaac9791a6d2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ImprisonedTo';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+      sec-mem-desc-line = '43';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Uwieziony do danego ruchu
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Klasa odpowiedzialna za gracza
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_question';
+  cp-name   = 'graTakCzyNieLibrary::Question';
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_1ac4f59c9c95c4f36d32f72ce02d7cd8cd';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Id';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+ID pytania
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_1a1cf202d152b2eb83d7d1d9cabd814110';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'QuestionText';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '22';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Treść pytania
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_1a7f95a27b2eedc44290b407879a6c785e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CorrectAnswer';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '27';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Czy odpowiedź jest prawidłowa
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+  cp-fileline  = '13';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Model pytań
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classgra_tak_czy_nie_library_1_1_question_database';
+  cp-name   = 'graTakCzyNieLibrary::QuestionDatabase';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_database_1a6aca08b71bb1fe750b0334810a76e1fc';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< Question >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'GetRandomQuestion';
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '62';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Zwraca losowe pytanie z listy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_database_1a65457b1976b86043ae19895a44125155';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+async Task< bool?>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CheckAnswer';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'questionId';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'answer';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '82';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Sprawdza odpowiedź
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary>
+<param name="questionId">ID pytania</param>
+<param name="answer">Odpowiedź gracza</param>
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_database_1a6506fcf9716c9d879605bdec678f9243';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Random
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'random';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new Random()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '35';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classgra_tak_czy_nie_library_1_1_question_database_1ac35a493686f808b929fb17e886f7e969';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+List< Question >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'questions';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new List<Question>()
+        {
+            new Question {Id = 1, QuestionText = "Czy Berlin jest stolicą Niemiec?", CorrectAnswer = true},
+            new Question {Id = 2, QuestionText = "Czy 1 tona liczy 100 kg?", CorrectAnswer = false},
+            new Question {Id = 3, QuestionText = "Czy Śniardwy są największym jeziorem w Polsce?", CorrectAnswer = true},
+            new Question {Id = 4, QuestionText = "Czy Lewis Carroll to pseudonim Charles'a Lutwidge Dodgsona?", CorrectAnswer = true},
+            new Question {Id = 5, QuestionText = "Czy League of Legends jest grą RPG?", CorrectAnswer = false},
+            new Question {Id = 6, QuestionText = "Czy Leonardo da Vinci jest autorem Mona Lisy?", CorrectAnswer = true},
+            new Question {Id = 7, QuestionText = "Czy W Japonii pełnoletność uzyskuje się w wieku 21 lat?", CorrectAnswer = false},
+            new Question {Id = 8, QuestionText = "Czy Kot singapurski to najmniejsza i najlżejsza rasa kotów na świecie?", CorrectAnswer = true},
+            new Question {Id = 9, QuestionText = "Czy Biceps to najsilniejszy mięsień w ludzkim ciele?", CorrectAnswer = false},
+            new Question {Id = 10, QuestionText = "Czy Liczba pi wynosi około 3,14?", CorrectAnswer = true},
+            new Question {Id = 11, QuestionText = "Czy Ziemia jest czwartą planetą od Słońca?", CorrectAnswer = false},
+            new Question {Id = 12, QuestionText = "Czy mur Berliński runął w 1989r?", CorrectAnswer = true},
+            new Question {Id = 13, QuestionText = "Czy Marilyn Monroe miała wiecej niż 170 cm wzrostu?", CorrectAnswer = false},
+            new Question {Id = 14, QuestionText = "Czy CH4O to wzór sumaryczny metanolu?", CorrectAnswer = true},
+            new Question {Id = 15, QuestionText = "Czy sambar należy do rodziny jeleniowatych?", CorrectAnswer = true},
+            new Question {Id = 16, QuestionText = "Czy Val Kilmer wystąpił w filmie Gorączka?", CorrectAnswer = true},
+            new Question {Id = 17, QuestionText = "Czy Stefan Żeromski jest autorem Lalki", CorrectAnswer = false}
+        }
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+  cp-fileline  = '34';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Zawiera baze pytań, generuje losowe pytania, sprawdza odpowiedzi
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+file = {
+  file-id   = '_board_8cs';
+  file-name = 'Board.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Board.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_cube_8cs';
+  file-name = 'Cube.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Cube.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_engine_8cs';
+  file-name = 'Engine.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Engine.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_engine_result_8cs';
+  file-name = 'EngineResult.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/EngineResult.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_field_8cs';
+  file-name = 'Field.cs';
+    enum = {
+    enum-member = {
+      enum-mem-kind = 'enum';
+      enum-mem-id   = 'namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e';
+      enum-mem-virt = normal;
+      enum-mem-prot = public;
+      enum-mem-name = 'Field';
+      enum-mem-enum = { enum-name = Start; };
+      enum-mem-enum = { enum-name = Meta; };
+      enum-mem-enum = { enum-name = Question; };
+      enum-mem-enum = { enum-name = Penalty; };
+      enum-mem-enum = { enum-name = Bonus; };
+      enum-mem-enum = { enum-name = Trap; };
+      enum-mem-enum = { enum-name = Normal; };
+      enum-mem-desc-file = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Field.cs';
+      enum-mem-desc-line = '13';
+      enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Pola planszy
+_EnD_oF_dEf_TeXt_;
+      enum-mem-documentation = <<_EnD_oF_dEf_TeXt_
+</summary> 
+_EnD_oF_dEf_TeXt_;
+    }; /* enum-member */
+    };
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Field.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_player_8cs';
+  file-name = 'Player.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Player.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_question_8cs';
+  file-name = 'Question.cs';
+  file-full-name  = 'C:/Users/Fulish/Desktop/graTakCzyNie/graTakCzyNieLibrary/Question.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */

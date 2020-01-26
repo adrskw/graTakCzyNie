@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgra_tak_czy_nie_library_1_1_player" kind="class" language="C#" prot="public">
+    <compoundname>graTakCzyNieLibrary::Player</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1a2e2e3412317a37d07dc6ba117b1d0613" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int graTakCzyNieLibrary.Player.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+<para>ID Gracza </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="17" column="20" bodyfile="Player.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1ae44548273dee65e834c137b2d4e13c06" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string graTakCzyNieLibrary.Player.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>Nazwa Gracza </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="22" column="23" bodyfile="Player.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1ad122fbcb7e90550e97d18008f9d65fa7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string graTakCzyNieLibrary.Player.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <briefdescription>
+<para>Kolor Gracza </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="27" column="23" bodyfile="Player.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1aae487dd3051554dd3048d36305c49279" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" kindref="member">Field</ref></type>
+        <definition>Field graTakCzyNieLibrary.Player.CurrentField</definition>
+        <argsstring></argsstring>
+        <name>CurrentField</name>
+        <briefdescription>
+<para>Obecne pole na planszy </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="32" column="22" bodyfile="Player.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1ae46c1810793d31f2bfe2eaa25daa27d9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int graTakCzyNieLibrary.Player.CurrentPosition</definition>
+        <argsstring></argsstring>
+        <name>CurrentPosition</name>
+        <briefdescription>
+<para>Obecna pozycja na planszy </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="37" column="20" bodyfile="Player.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_player_1a3e82f3e3104d7238eb6efaac9791a6d2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int graTakCzyNieLibrary.Player.ImprisonedTo</definition>
+        <argsstring></argsstring>
+        <name>ImprisonedTo</name>
+        <briefdescription>
+<para>Uwieziony do danego ruchu </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="43" column="20" bodyfile="Player.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_player_1aecdd534779809bd8780ce0f7b8aee134" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graTakCzyNieLibrary.Player.Player</definition>
+        <argsstring>(int id, string name, string color)</argsstring>
+        <name>Player</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy gracza i przypisuje mu pole startowe </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID Gracza</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nazwa Gracza</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kolor Gracza</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player.cs" line="51" column="16" bodyfile="Player.cs" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa odpowiedzialna za gracza </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Player.cs" line="13" column="1" bodyfile="Player.cs" bodystart="12" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1ad122fbcb7e90550e97d18008f9d65fa7" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>Color</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1aae487dd3051554dd3048d36305c49279" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>CurrentField</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1ae46c1810793d31f2bfe2eaa25daa27d9" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>CurrentPosition</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1a2e2e3412317a37d07dc6ba117b1d0613" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>Id</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1a3e82f3e3104d7238eb6efaac9791a6d2" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>ImprisonedTo</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1ae44548273dee65e834c137b2d4e13c06" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>Name</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_player_1aecdd534779809bd8780ce0f7b8aee134" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Player</scope><name>Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

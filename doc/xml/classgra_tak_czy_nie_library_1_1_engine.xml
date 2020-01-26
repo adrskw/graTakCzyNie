@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgra_tak_czy_nie_library_1_1_engine" kind="class" language="C#" prot="public">
+    <compoundname>graTakCzyNieLibrary::Engine</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_engine_1ac52754d8ad0f8d52f1037ade479b598a" prot="private" static="no" mutable="no">
+        <type><ref refid="classgra_tak_czy_nie_library_1_1_board" kindref="compound">Board</ref></type>
+        <definition>Board graTakCzyNieLibrary.Engine.board</definition>
+        <argsstring></argsstring>
+        <name>board</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="14" column="23" bodyfile="Engine.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_engine_1a5925d3b542869b23243698554af79d1c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graTakCzyNieLibrary.Engine.gameRunning</definition>
+        <argsstring></argsstring>
+        <name>gameRunning</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="31" column="22" bodyfile="Engine.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_engine_1a4b4d4d26c42b1100a99716fba1ed8c83" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="classgra_tak_czy_nie_library_1_1_question_database" kindref="compound">QuestionDatabase</ref></type>
+        <definition>QuestionDatabase graTakCzyNieLibrary.Engine.qDatabase</definition>
+        <argsstring></argsstring>
+        <name>qDatabase</name>
+        <briefdescription>
+<para>Dostęp do klasy z pytaniami </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="19" column="33" bodyfile="Engine.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_engine_1a173684785b11a01394ecf1e55cbc1057" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int graTakCzyNieLibrary.Engine.MoveCounter</definition>
+        <argsstring></argsstring>
+        <name>MoveCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Licznik ruchów </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="24" column="20" bodyfile="Engine.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_engine_1a1876a427c301aeaee641d6548f2b02e5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int graTakCzyNieLibrary.Engine.NextTurnPlayerId</definition>
+        <argsstring></argsstring>
+        <name>NextTurnPlayerId</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Który gracz jest następny w kolejce </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="29" column="20" bodyfile="Engine.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_engine_1a515b0f9c1cfeecaf7921878c9e5d4654" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>List&lt; <ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref> &gt;</type>
+        <definition>List&lt;Player&gt; graTakCzyNieLibrary.Engine.PlayersList</definition>
+        <argsstring></argsstring>
+        <name>PlayersList</name>
+        <initializer>= new List&lt;<ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="33" column="21" bodyfile="Engine.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_engine_1a5e4dd939f914e5c0d61c24b163af094f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="classgra_tak_czy_nie_library_1_1_engine_result" kindref="compound">EngineResult</ref> &gt;</type>
+        <definition>async Task&lt;EngineResult&gt; graTakCzyNieLibrary.Engine.StartGame</definition>
+        <argsstring>(int fieldNumber)</argsstring>
+        <name>StartGame</name>
+        <param>
+          <type>int</type>
+          <declname>fieldNumber</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy plansze i startuje gre </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fieldNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba pól planszy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="39" column="27" bodyfile="Engine.cs" bodystart="39" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_engine_1ab391677fb1aec97ec71a1b9cdbb46e35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="classgra_tak_czy_nie_library_1_1_engine_result" kindref="compound">EngineResult</ref> &gt;</type>
+        <definition>async Task&lt;EngineResult&gt; graTakCzyNieLibrary.Engine.CreatePlayers</definition>
+        <argsstring>(List&lt; Player &gt; players)</argsstring>
+        <name>CreatePlayers</name>
+        <param>
+          <type>List&lt; <ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref> &gt;</type>
+          <declname>players</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy liste graczy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>players</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lista graczy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="77" column="27" bodyfile="Engine.cs" bodystart="77" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_engine_1aa5b0571b86e7d9258d2a87038da1e353" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="classgra_tak_czy_nie_library_1_1_engine_result" kindref="compound">EngineResult</ref> &gt;</type>
+        <definition>async Task&lt;EngineResult&gt; graTakCzyNieLibrary.Engine.Move</definition>
+        <argsstring>(Player player, int number)</argsstring>
+        <name>Move</name>
+        <param>
+          <type><ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Przemieszcza graczy po planszy i w zależności od tego na jakim polu gracz się znajdzie, podejmuje odpowiednie akcje </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gracz</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba pól na planszy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="129" column="27" bodyfile="Engine.cs" bodystart="129" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_engine_1a2b125d87d07d4a19900f9ae34ab70cb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="classgra_tak_czy_nie_library_1_1_engine_result" kindref="compound">EngineResult</ref> &gt;</type>
+        <definition>async Task&lt;EngineResult&gt; graTakCzyNieLibrary.Engine.PlayerAnswer</definition>
+        <argsstring>(Player player, int questionId, bool answer)</argsstring>
+        <name>PlayerAnswer</name>
+        <param>
+          <type><ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>questionId</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>answer</declname>
+        </param>
+        <briefdescription>
+<para>Sprawdza odpowiedź </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gracz</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>questionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id pytania</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>answer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odpowiedź gracza</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Engine.cs" line="210" column="27" bodyfile="Engine.cs" bodystart="210" bodyend="251"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Silnik gry </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Engine.cs" line="13" column="1" bodyfile="Engine.cs" bodystart="12" bodyend="252"/>
+    <listofallmembers>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1ac52754d8ad0f8d52f1037ade479b598a" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>board</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1ab391677fb1aec97ec71a1b9cdbb46e35" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>CreatePlayers</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a5925d3b542869b23243698554af79d1c" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>gameRunning</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1aa5b0571b86e7d9258d2a87038da1e353" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>Move</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a173684785b11a01394ecf1e55cbc1057" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>MoveCounter</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a1876a427c301aeaee641d6548f2b02e5" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>NextTurnPlayerId</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a2b125d87d07d4a19900f9ae34ab70cb1" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>PlayerAnswer</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a515b0f9c1cfeecaf7921878c9e5d4654" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>PlayersList</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a4b4d4d26c42b1100a99716fba1ed8c83" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>qDatabase</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_engine_1a5e4dd939f914e5c0d61c24b163af094f" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Engine</scope><name>StartGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

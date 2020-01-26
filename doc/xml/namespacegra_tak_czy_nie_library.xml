@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegra_tak_czy_nie_library" kind="namespace" language="C#">
+    <compoundname>graTakCzyNieLibrary</compoundname>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_board" prot="public">graTakCzyNieLibrary::Board</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_cube" prot="public">graTakCzyNieLibrary::Cube</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_engine" prot="public">graTakCzyNieLibrary::Engine</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_engine_result" prot="public">graTakCzyNieLibrary::EngineResult</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_player" prot="public">graTakCzyNieLibrary::Player</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_question" prot="public">graTakCzyNieLibrary::Question</innerclass>
+    <innerclass refid="classgra_tak_czy_nie_library_1_1_question_database" prot="public">graTakCzyNieLibrary::QuestionDatabase</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Field</name>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eaa6122a65eaa676f700ae68d393054a37" prot="public">
+          <name>Start</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eab6755d218d5f4e1cef9cce9cc39aeda9" prot="public">
+          <name>Meta</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857eaa97ea56b0e00b2379736ae60869ff66a" prot="public">
+          <name>Question</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea78676254cca7a779014dc1960efb47e2" prot="public">
+          <name>Penalty</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea3c0ee4bacc905ad4abb857127975acfc" prot="public">
+          <name>Bonus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea8b9038a4896d530d239f4af3bbb30357" prot="public">
+          <name>Trap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857ea960b44c579bc2f6818d2daaf9e4c16f0" prot="public">
+          <name>Normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Pola planszy </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Field.cs" line="13" column="1" bodyfile="Field.cs" bodystart="12" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Board.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

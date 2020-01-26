@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgra_tak_czy_nie_library_1_1_question_database" kind="class" language="C#" prot="public">
+    <compoundname>graTakCzyNieLibrary::QuestionDatabase</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_question_database_1a6506fcf9716c9d879605bdec678f9243" prot="private" static="no" mutable="no">
+        <type>Random</type>
+        <definition>Random graTakCzyNieLibrary.QuestionDatabase.random</definition>
+        <argsstring></argsstring>
+        <name>random</name>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Question.cs" line="35" column="24" bodyfile="Question.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_question_database_1ac35a493686f808b929fb17e886f7e969" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> &gt;</type>
+        <definition>List&lt;Question&gt; graTakCzyNieLibrary.QuestionDatabase.questions</definition>
+        <argsstring></argsstring>
+        <name>questions</name>
+        <initializer>= new List&lt;<ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref>&gt;()
+        {
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 1, QuestionText = &quot;Czy Berlin jest stolicą Niemiec?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 2, QuestionText = &quot;Czy 1 tona liczy 100 kg?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 3, QuestionText = &quot;Czy Śniardwy są największym jeziorem w Polsce?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 4, QuestionText = &quot;Czy Lewis Carroll to pseudonim Charles&apos;a Lutwidge Dodgsona?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 5, QuestionText = &quot;Czy League of Legends jest grą RPG?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 6, QuestionText = &quot;Czy Leonardo da Vinci jest autorem Mona Lisy?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 7, QuestionText = &quot;Czy W Japonii pełnoletność uzyskuje się w wieku 21 lat?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 8, QuestionText = &quot;Czy Kot singapurski to najmniejsza i najlżejsza rasa kotów na świecie?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 9, QuestionText = &quot;Czy Biceps to najsilniejszy mięsień w ludzkim ciele?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 10, QuestionText = &quot;Czy Liczba pi wynosi około 3,14?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 11, QuestionText = &quot;Czy Ziemia jest czwartą planetą od Słońca?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 12, QuestionText = &quot;Czy mur Berliński runął w 1989r?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 13, QuestionText = &quot;Czy Marilyn Monroe miała wiecej niż 170 cm wzrostu?&quot;, CorrectAnswer = false},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 14, QuestionText = &quot;Czy CH4O to wzór sumaryczny metanolu?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 15, QuestionText = &quot;Czy sambar należy do rodziny jeleniowatych?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 16, QuestionText = &quot;Czy Val Kilmer wystąpił w filmie Gorączka?&quot;, CorrectAnswer = true},
+            new <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> {Id = 17, QuestionText = &quot;Czy Stefan Żeromski jest autorem Lalki&quot;, CorrectAnswer = false}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Question.cs" line="37" column="22" bodyfile="Question.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_question_database_1a6aca08b71bb1fe750b0334810a76e1fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="classgra_tak_czy_nie_library_1_1_question" kindref="compound">Question</ref> &gt;</type>
+        <definition>async Task&lt;Question&gt; graTakCzyNieLibrary.QuestionDatabase.GetRandomQuestion</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomQuestion</name>
+        <briefdescription>
+<para>Zwraca losowe pytanie z listy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Question.cs" line="62" column="27" bodyfile="Question.cs" bodystart="62" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_question_database_1a65457b1976b86043ae19895a44125155" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; bool?&gt;</type>
+        <definition>async Task&lt;bool?&gt; graTakCzyNieLibrary.QuestionDatabase.CheckAnswer</definition>
+        <argsstring>(int questionId, bool answer)</argsstring>
+        <name>CheckAnswer</name>
+        <param>
+          <type>int</type>
+          <declname>questionId</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>answer</declname>
+        </param>
+        <briefdescription>
+<para>Sprawdza odpowiedź </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>questionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID pytania</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>answer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Odpowiedź gracza</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Question.cs" line="82" column="27" bodyfile="Question.cs" bodystart="82" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Zawiera baze pytań, generuje losowe pytania, sprawdza odpowiedzi </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Question.cs" line="34" column="1" bodyfile="Question.cs" bodystart="33" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a65457b1976b86043ae19895a44125155" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::QuestionDatabase</scope><name>CheckAnswer</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a6aca08b71bb1fe750b0334810a76e1fc" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::QuestionDatabase</scope><name>GetRandomQuestion</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_question_database_1ac35a493686f808b929fb17e886f7e969" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::QuestionDatabase</scope><name>questions</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_question_database_1a6506fcf9716c9d879605bdec678f9243" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::QuestionDatabase</scope><name>random</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

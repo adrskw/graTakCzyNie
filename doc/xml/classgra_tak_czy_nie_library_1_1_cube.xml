@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgra_tak_czy_nie_library_1_1_cube" kind="class" language="C#" prot="public">
+    <compoundname>graTakCzyNieLibrary::Cube</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_cube_1a3f741a2c4420c6fbfba02777a1ed40e3" prot="private" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random graTakCzyNieLibrary.Cube.random</definition>
+        <argsstring></argsstring>
+        <name>random</name>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cube.cs" line="14" column="31" bodyfile="Cube.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_cube_1a0f52ddc05e5e74eee7e0019c8252654e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; int &gt;</type>
+        <definition>static async Task&lt;int&gt; graTakCzyNieLibrary.Cube.GetRandomResult</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>GetRandomResult</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Losuje liczbę w podanym zakresie </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba początkowa</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba końcowa</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Cube.cs" line="21" column="34" bodyfile="Cube.cs" bodystart="21" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generuje losowa liczbę </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Cube.cs" line="13" column="1" bodyfile="Cube.cs" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classgra_tak_czy_nie_library_1_1_cube_1a0f52ddc05e5e74eee7e0019c8252654e" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Cube</scope><name>GetRandomResult</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_cube_1a3f741a2c4420c6fbfba02777a1ed40e3" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Cube</scope><name>random</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

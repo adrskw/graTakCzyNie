@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgra_tak_czy_nie_library_1_1_board" kind="class" language="C#" prot="public">
+    <compoundname>graTakCzyNieLibrary::Board</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classgra_tak_czy_nie_library_1_1_board_1ad2fbaaed3c77decc0464ecc8d5b8848c" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Dictionary&lt; int, <ref refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" kindref="member">Field</ref> &gt;</type>
+        <definition>Dictionary&lt;int, Field&gt; graTakCzyNieLibrary.Board.CreatedBoard</definition>
+        <argsstring></argsstring>
+        <name>CreatedBoard</name>
+        <briefdescription>
+<para>Utworzona plansza </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="17" column="34" bodyfile="Board.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgra_tak_czy_nie_library_1_1_board_1a4ac7d02b1baca4f5e408ccafa48294e2" prot="private" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random graTakCzyNieLibrary.Board.rnd</definition>
+        <argsstring></argsstring>
+        <name>rnd</name>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="19" column="31" bodyfile="Board.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_board_1ac3332513337c5b252090a227902fb284" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graTakCzyNieLibrary.Board.Board</definition>
+        <argsstring>(int fieldNumber)</argsstring>
+        <name>Board</name>
+        <param>
+          <type>int</type>
+          <declname>fieldNumber</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy nową planszę o określonej liczbie pól </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fieldNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba pól</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="25" column="16" bodyfile="Board.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_board_1ad47ecd49e96de520589a1c2e263a4129" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" kindref="member">Field</ref> &gt;</type>
+        <definition>async Task&lt;Field&gt; graTakCzyNieLibrary.Board.MovePlayer</definition>
+        <argsstring>(Player player, int fieldNumber)</argsstring>
+        <name>MovePlayer</name>
+        <param>
+          <type><ref refid="classgra_tak_czy_nie_library_1_1_player" kindref="compound">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fieldNumber</declname>
+        </param>
+        <briefdescription>
+<para>Przemieszcza gracza po planszy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gracz</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fieldNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba pól</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="76" column="27" bodyfile="Board.cs" bodystart="76" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_board_1aaf67228c442c4280838e219d8104add4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graTakCzyNieLibrary.Board.CreateBoard</definition>
+        <argsstring>(int fieldNumber)</argsstring>
+        <name>CreateBoard</name>
+        <param>
+          <type>int</type>
+          <declname>fieldNumber</declname>
+        </param>
+        <briefdescription>
+<para>Tworzy plansze o określonej liczbie pól </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fieldNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liczba pól</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="35" column="22" bodyfile="Board.cs" bodystart="35" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgra_tak_czy_nie_library_1_1_board_1abe332cf061060432a59b8cd73b391a32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegra_tak_czy_nie_library_1a6e67ea61d96dd1bc817e87a610dd857e" kindref="member">Field</ref></type>
+        <definition>Field graTakCzyNieLibrary.Board.GetRandomFieldAction</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomFieldAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.cs" line="53" column="23" bodyfile="Board.cs" bodystart="53" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tworzy plansze i przesuwa po niej graczy </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Board.cs" line="13" column="1" bodyfile="Board.cs" bodystart="12" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1ac3332513337c5b252090a227902fb284" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>Board</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1aaf67228c442c4280838e219d8104add4" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>CreateBoard</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1ad2fbaaed3c77decc0464ecc8d5b8848c" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>CreatedBoard</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1abe332cf061060432a59b8cd73b391a32" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>GetRandomFieldAction</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1ad47ecd49e96de520589a1c2e263a4129" prot="public" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>MovePlayer</name></member>
+      <member refid="classgra_tak_czy_nie_library_1_1_board_1a4ac7d02b1baca4f5e408ccafa48294e2" prot="private" virt="non-virtual"><scope>graTakCzyNieLibrary::Board</scope><name>rnd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace graTakCzyNieLibrary
 {
+    /// <summary>
+    /// Generuje losowa liczbę
+    /// </summary>
     public class Cube
     {
         private static Random random = new Random();

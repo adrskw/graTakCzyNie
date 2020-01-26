@@ -1,0 +1,159 @@
+\hypertarget{classgra_tak_czy_nie_library_1_1_engine}{}\doxysection{Dokumentacja klasy gra\+Tak\+Czy\+Nie\+Library.\+Engine}
+\label{classgra_tak_czy_nie_library_1_1_engine}\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+
+
+Silnik gry  
+
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}} $>$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a5e4dd939f914e5c0d61c24b163af094f}{Start\+Game}} (int field\+Number)
+\begin{DoxyCompactList}\small\item\em Tworzy plansze i startuje gre \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}} $>$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_ab391677fb1aec97ec71a1b9cdbb46e35}{Create\+Players}} (List$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}} $>$ players)
+\begin{DoxyCompactList}\small\item\em Tworzy liste graczy \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}} $>$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_aa5b0571b86e7d9258d2a87038da1e353}{Move}} (\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}} player, int number)
+\begin{DoxyCompactList}\small\item\em Przemieszcza graczy po planszy i w zależności od tego na jakim polu gracz się znajdzie, podejmuje odpowiednie akcje \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}} $>$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a2b125d87d07d4a19900f9ae34ab70cb1}{Player\+Answer}} (\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}} player, int question\+Id, bool answer)
+\begin{DoxyCompactList}\small\item\em Sprawdza odpowiedź \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_question_database}{Question\+Database}} \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a4b4d4d26c42b1100a99716fba1ed8c83}{q\+Database}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dostęp do klasy z pytaniami \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a173684785b11a01394ecf1e55cbc1057}{Move\+Counter}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Licznik ruchów \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a1876a427c301aeaee641d6548f2b02e5}{Next\+Turn\+Player\+Id}} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Który gracz jest następny w kolejce \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}} $>$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_a515b0f9c1cfeecaf7921878c9e5d4654}{Players\+List}} = new List$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Silnik gry 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_ab391677fb1aec97ec71a1b9cdbb46e35}\label{classgra_tak_czy_nie_library_1_1_engine_ab391677fb1aec97ec71a1b9cdbb46e35}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!CreatePlayers@{CreatePlayers}}
+\index{CreatePlayers@{CreatePlayers}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{CreatePlayers()}{CreatePlayers()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}}$>$ gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Create\+Players (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}} $>$}]{players }\end{DoxyParamCaption})}
+
+
+
+Tworzy liste graczy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em players} & Lista graczy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_aa5b0571b86e7d9258d2a87038da1e353}\label{classgra_tak_czy_nie_library_1_1_engine_aa5b0571b86e7d9258d2a87038da1e353}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!Move@{Move}}
+\index{Move@{Move}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}}$>$ gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}}}]{player,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Przemieszcza graczy po planszy i w zależności od tego na jakim polu gracz się znajdzie, podejmuje odpowiednie akcje 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & Gracz\\
+\hline
+{\em number} & Liczba pól na planszy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a2b125d87d07d4a19900f9ae34ab70cb1}\label{classgra_tak_czy_nie_library_1_1_engine_a2b125d87d07d4a19900f9ae34ab70cb1}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!PlayerAnswer@{PlayerAnswer}}
+\index{PlayerAnswer@{PlayerAnswer}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{PlayerAnswer()}{PlayerAnswer()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}}$>$ gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Player\+Answer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}}}]{player,  }\item[{int}]{question\+Id,  }\item[{bool}]{answer }\end{DoxyParamCaption})}
+
+
+
+Sprawdza odpowiedź 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & Gracz\\
+\hline
+{\em question\+Id} & Id pytania\\
+\hline
+{\em answer} & Odpowiedź gracza\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a5e4dd939f914e5c0d61c24b163af094f}\label{classgra_tak_czy_nie_library_1_1_engine_a5e4dd939f914e5c0d61c24b163af094f}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_engine_result}{Engine\+Result}}$>$ gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Start\+Game (\begin{DoxyParamCaption}\item[{int}]{field\+Number }\end{DoxyParamCaption})}
+
+
+
+Tworzy plansze i startuje gre 
+
+
+\begin{DoxyParams}{Parametry}
+{\em field\+Number} & Liczba pól planszy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja właściwości}
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a173684785b11a01394ecf1e55cbc1057}\label{classgra_tak_czy_nie_library_1_1_engine_a173684785b11a01394ecf1e55cbc1057}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!MoveCounter@{MoveCounter}}
+\index{MoveCounter@{MoveCounter}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{MoveCounter}{MoveCounter}}
+{\footnotesize\ttfamily int gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Move\+Counter = 0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Licznik ruchów 
+
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a1876a427c301aeaee641d6548f2b02e5}\label{classgra_tak_czy_nie_library_1_1_engine_a1876a427c301aeaee641d6548f2b02e5}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!NextTurnPlayerId@{NextTurnPlayerId}}
+\index{NextTurnPlayerId@{NextTurnPlayerId}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{NextTurnPlayerId}{NextTurnPlayerId}}
+{\footnotesize\ttfamily int gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Next\+Turn\+Player\+Id = 1\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Który gracz jest następny w kolejce 
+
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a515b0f9c1cfeecaf7921878c9e5d4654}\label{classgra_tak_czy_nie_library_1_1_engine_a515b0f9c1cfeecaf7921878c9e5d4654}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!PlayersList@{PlayersList}}
+\index{PlayersList@{PlayersList}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{PlayersList}{PlayersList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}}$>$ gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+Players\+List = new List$<$\mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_player}{Player}}$>$()\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classgra_tak_czy_nie_library_1_1_engine_a4b4d4d26c42b1100a99716fba1ed8c83}\label{classgra_tak_czy_nie_library_1_1_engine_a4b4d4d26c42b1100a99716fba1ed8c83}} 
+\index{graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}!qDatabase@{qDatabase}}
+\index{qDatabase@{qDatabase}!graTakCzyNieLibrary.Engine@{graTakCzyNieLibrary.Engine}}
+\doxysubsubsection{\texorpdfstring{qDatabase}{qDatabase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgra_tak_czy_nie_library_1_1_question_database}{Question\+Database}} gra\+Tak\+Czy\+Nie\+Library.\+Engine.\+q\+Database\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dostęp do klasy z pytaniami 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_engine_8cs}{Engine.\+cs}}\end{DoxyCompactItemize}
