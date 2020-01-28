@@ -125,13 +125,16 @@ namespace graTakCzyNie
         private async void ButtonStartGame_Click(object sender, RoutedEventArgs e)
         {
             EngineResult addPlayersResult = await AddPlayersToEnginePlayerList();
-            EngineResult startGameResult = await engine.StartGame(66);
 
-            if (addPlayersResult.Succedeed == false)
+            if (!addPlayersResult.Succedeed)
             {
                 MessageBox.Show(addPlayersResult.ErrorMessage);
+                return;
             }
-            else if (startGameResult.Succedeed == false)
+
+            EngineResult startGameResult = await engine.StartGame(66);
+
+            if (!startGameResult.Succedeed)
             {
                 MessageBox.Show(startGameResult.ErrorMessage);
             }

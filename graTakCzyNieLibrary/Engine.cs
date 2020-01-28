@@ -45,7 +45,7 @@ namespace graTakCzyNieLibrary
                     return new EngineResult
                     {
                         Succedeed = false,
-                        ErrorMessage = "Player list is not set!"
+                        ErrorMessage = "Lista graczy nie jest ustawiona!"
                     };
                 }
                 else if (gameRunning)
@@ -53,7 +53,7 @@ namespace graTakCzyNieLibrary
                     return new EngineResult
                     {
                         Succedeed = false,
-                        ErrorMessage = "Game is already running!"
+                        ErrorMessage = "Gra jest już uruchomiona!"
                     };
                 }
                 else
